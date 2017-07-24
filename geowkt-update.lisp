@@ -1,0 +1,122 @@
+(in-package :geowkt-update)
+
+(defstruct token type value position)
+
+(defun tokenp (token type &optional value)
+  (if value
+      (and (eql (token-type token) type)
+           (eql (token-value token) value))
+      (eql (token-type token) type)))
+
+(define-condition wkt-parse-error (simple-error) ())
+
+(defparameter *whitespace-chars*
+  (concatenate 'string (list #\space #\tab #.(code-char 11) #\page (code-char #xa0))))
+
+(defun tokenize (stream)
+  (let ((position 0))
+    (labels ((token (type value)
+	       (make-token :type type :value value :position position))
+	     (peek ()
+	       (peek-char nil stream nil))
+	     (next (&optional eof-error)
+	       (let ((ch (read-char stream eof-error)))
+		 (when ch
+		   (incf position)
+		   ch)))
+	     (skip-whitespace ()
+	       (loop for ch = (peek)
+		     while (and ch (find ch *whitespace-chars*))
+		     do (next)))
+	     (number-char-p (ch) (or (digit-char-p ch) (find ch ".e-+")))
+	     (read-number ()
+	       (let ((numstr (with-output-to-string (*standard-output*)
+                               (loop for ch = (peek) do
+                                 (if (and ch (number-char-p ch))
+                                     (write-char (next))
+                                     (return))))))
+                 (token :number (parse-number:parse-number numstr))))
+	     (word-char-p (ch) (alphanumericp ch))
+	     (read-word ()
+	       (let ((word (with-output-to-string (*standard-output*)
+			     (loop for ch = (peek)
+				   do (if (and ch (word-char-p ch))
+					  (write-char (next))
+					  (return))))))
+		 (token :word word)))
+	     (read-string ()
+	       (let ((str (with-output-to-string (*standard-output*)
+			    (loop for ch = (next)
+				  until (char= ch #\")
+				  do (when ch
+				       (write-char ch))))))
+		 (token :string str)))
+	     (next-token ()
+	       (skip-whitespace)
+	       (let ((next (peek)))
+		 (cond ((null next) (token :eof "EOF"))
+		       ((char= next #\") (next) (read-string))
+		       ((char= next #\[) (token :block-start (next)))
+		       ((char= next #\]) (token :block-end (next)))
+		       ((char= next #\,) (token :comma (next)))
+		       ((number-char-p next) (read-number))
+		       ((word-char-p next) (read-word))
+		       (t (error 'wkt-parse-error :format-control "Unexpected character '~a' at ~d."
+						  :format-arguments (list next position)))))))
+      #'next-token)))
+
+(defun %parse (stream)
+  (let* ((input (tokenize stream))
+	 (token (funcall input))
+	 peeked words)
+    (labels ((peek () (or peeked (setf peeked (funcall input))))
+	     (next ()
+	       (if peeked
+		   (setf token peeked peeked nil)
+		   (setf token (funcall input))))
+	     (block* ()
+	       (loop with result = (list (pop words))
+		     until (or (tokenp token :eof)
+			       (tokenp token :block-end))
+		     do (let ((s (statement)))
+			  (when s (push s result)))
+		     finally (progn
+			       (when words (push (pop words) result))
+			       (return (reverse result)))))
+	     (statement ()
+	       (prog1 (case (token-type token)
+			(:comma (when words (pop words)))
+			(:word (push (intern (token-value token) :keyword) words) (values))
+			((:number :string) (token-value token))
+			(:block-start (next) (block*)))
+		 (next))))
+      (loop until (tokenp token :eof)
+	    when (statement)
+	      collect it))))
+
+(defun %get-tokens (string)
+  "Debugging helper"
+  (with-input-from-string (stream string)
+    (let ((f (tokenize stream)))
+      (loop for token = (funcall f)
+	    until (tokenp token :eof)
+	    collect token))))
+
+(defun parse (string)
+  (with-input-from-string (stream string)
+    (%parse stream)))
+
+(defun get-online (epsg-code)
+  (drakma:http-request (format nil "http://spatialreference.org/ref/epsg/~d/ogcwkt/" epsg-code)))
+
+(defun update-db ()
+  (with-open-file (out "db.lisp" :direction :output
+				 :if-exists :supersede
+				 :if-does-not-exist :create)
+    (write '(in-package :geowkt) :stream out)
+    (loop for code from 3820 to 4999
+	  do (handler-case
+		 (progn (write `(setf (gethash ,code *db*) ',(parse (get-online code))) :stream out)
+			(terpri out)
+			(sleep 0.2))
+	       (wkt-parse-error ())))))

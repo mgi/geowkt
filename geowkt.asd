@@ -2,10 +2,9 @@
 (in-package :asdf-user)
 
 (asdf:defsystem :geowkt
-  :name "geo-wkt"
   :author "Manuel Giraud <manuel@ledu-giraud.fr>"
-  :description "Library to parse Geo Well-known-text"
+  :description "Geo Well-known-text library"
   :serial t
-  :depends-on (:parse-number :drakma)
-  :components ((:file "package")
-	       (:file "geowkt")))
+  :components ((:file "packages")
+	       (:file "geowkt")
+	       (:file "db")))
