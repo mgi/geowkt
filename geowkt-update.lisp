@@ -107,15 +107,19 @@
     (%parse stream)))
 
 (defun get-online (epsg-code)
-  (drakma:http-request (format nil "http://spatialreference.org/ref/epsg/~d/ogcwkt/" epsg-code)))
+  (multiple-value-bind (content code)
+      (drakma:http-request (format nil "http://spatialreference.org/ref/epsg/~d/ogcwkt/" epsg-code))
+    (when (= code 200)
+      content)))
 
-(defun update-db ()
+(defun update-db (&key (start 2000) (end 32761))
   (with-open-file (out "db.lisp" :direction :output
-				 :if-exists :supersede
+				 :if-exists :append
 				 :if-does-not-exist :create)
-    (write '(in-package :geowkt) :stream out)
-    (terpri out)
-    (loop for code from 2000 to 32761
+    (when (zerop (file-position out))
+      (write '(in-package :geowkt) :stream out)
+      (terpri out))
+    (loop for code from start to end
 	  do (handler-case
 		 (let ((response (get-online code)))
 		   (when response
