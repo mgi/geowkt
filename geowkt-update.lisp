@@ -114,9 +114,12 @@
 				 :if-exists :supersede
 				 :if-does-not-exist :create)
     (write '(in-package :geowkt) :stream out)
-    (loop for code from 3820 to 4999
+    (terpri out)
+    (loop for code from 2000 to 32761
 	  do (handler-case
-		 (progn (write `(setf (gethash ,code *db*) ',(parse (get-online code))) :stream out)
-			(terpri out)
-			(sleep 0.2))
+		 (let ((response (get-online code)))
+		   (when response
+		     (write `(setf (gethash ,code *db*) ',(parse response)) :stream out)
+		     (terpri out))
+		   (sleep 0.2))
 	       (wkt-parse-error ())))))
