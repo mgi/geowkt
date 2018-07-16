@@ -1,5 +1,6 @@
 (defpackage :geowkt-update
-  (:use #:common-lisp))
+  (:use #:common-lisp)
+  (:export #:update-db))
 
 (defpackage :geowkt
   (:use #:common-lisp)

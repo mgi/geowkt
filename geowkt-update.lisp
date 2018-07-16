@@ -1,5 +1,7 @@
 (in-package :geowkt-update)
 
+(setf *read-default-float-format* 'double-float)
+
 (defstruct token type value position)
 
 (defun tokenp (token type &optional value)
@@ -113,17 +115,20 @@
       content)))
 
 (defun update-db (&key (start 2000) (end 32761))
-  (with-open-file (out "db.lisp" :direction :output
-				 :if-exists :append
-				 :if-does-not-exist :create)
-    (when (zerop (file-position out))
-      (write '(in-package :geowkt) :stream out)
-      (terpri out))
-    (loop for code from start to end
-	  do (handler-case
-		 (let ((response (get-online code)))
-		   (when response
-		     (write `(setf (gethash ,code *db*) ',(parse response)) :stream out)
-		     (terpri out))
-		   (sleep 0.2))
-	       (wkt-parse-error ())))))
+  (let* ((db #p"db.lisp")
+	 (db.old (merge-pathnames (pathname-name db) #p"xx.old")))
+    (when (probe-file db) (rename-file db db.old))
+    (with-open-file (out db :direction :output
+			    :if-exists :supersede
+			    :if-does-not-exist :create)
+      (when (zerop (file-position out))
+	(write '(in-package :geowkt) :stream out)
+	(terpri out))
+      (loop for code from start to end
+	    do (handler-case
+		   (let ((response (get-online code)))
+		     (when response
+		       (write `(setf (gethash ,code *db*) ',(parse response)) :stream out)
+		       (terpri out))
+		     (sleep 0.2))
+		 (wkt-parse-error ()))))))
