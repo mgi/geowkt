@@ -126,6 +126,7 @@
 		 (let ((response (get-online code)))
 		   (when response
 		     (write `(setf (gethash ,code *db*) ',(parse response)) :stream out)
-		     (terpri out))
+		     (terpri out)
+		     (finish-output out))
 		   (sleep 0.1))
 	       (wkt-parse-error ())))))
