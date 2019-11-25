@@ -110,7 +110,7 @@
 
 (defun get-online (epsg-code)
   (multiple-value-bind (content code)
-      (drakma:http-request (format nil "http://spatialreference.org/ref/epsg/~d/ogcwkt/" epsg-code))
+      (drakma:http-request (format nil "https://spatialreference.org/ref/epsg/~d/ogcwkt/" epsg-code))
     (when (= code 200)
       content)))
 
