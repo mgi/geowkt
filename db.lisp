@@ -37870,12 +37870,9 @@
            (:AXIS "Geodetic latitude" :NORTH)
            (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
            (:AUTHORITY "EPSG" "4999"))))
-(SETF (GETHASH 5819 *DB*)
-        '((:PROJCS "EPSG topocentric example A")))
-(SETF (GETHASH 5820 *DB*)
-        '((:PROJCS "EPSG topocentric example B")))
-(SETF (GETHASH 5821 *DB*)
-        '((:PROJCS "EPSG vertical perspective example")))
+(SETF (GETHASH 5819 *DB*) '((:PROJCS "EPSG topocentric example A")))
+(SETF (GETHASH 5820 *DB*) '((:PROJCS "EPSG topocentric example B")))
+(SETF (GETHASH 5821 *DB*) '((:PROJCS "EPSG vertical perspective example")))
 (SETF (GETHASH 20004 *DB*)
         '((:PROJCS "Pulkovo 1995 / Gauss-Kruger zone 4"
            (:GEOGCS "Pulkovo 1995"
@@ -63688,3 +63685,3093 @@
            (:PARAMETER "false_easting" 2000000)
            (:PARAMETER "false_northing" 2000000) (:AUTHORITY "EPSG" "32761")
            (:AXIS "Easting" :UNKNOWN) (:AXIS "Northing" :UNKNOWN))))
+(SETF (GETHASH 32766 *DB*)
+        '((:PROJCS "WGS 84 / TM 36 SE"
+           (:GEOGCS "WGS 84"
+            (:DATUM "WGS_1984"
+             (:SPHEROID "WGS 84" 6378137 298.257223563
+              (:AUTHORITY "EPSG" "7030"))
+             (:AUTHORITY "EPSG" "6326"))
+            (:PRIMEM "Greenwich" 0 (:AUTHORITY "EPSG" "8901"))
+            (:UNIT "degree" 0.01745329251994328 (:AUTHORITY "EPSG" "9122"))
+            (:AUTHORITY "EPSG" "4326"))
+           (:UNIT "metre" 1 (:AUTHORITY "EPSG" "9001"))
+           (:PROJECTION "Transverse_Mercator")
+           (:PARAMETER "latitude_of_origin" 0)
+           (:PARAMETER "central_meridian" 36)
+           (:PARAMETER "scale_factor" 0.9996)
+           (:PARAMETER "false_easting" 500000)
+           (:PARAMETER "false_northing" 10000000) (:AUTHORITY "EPSG" "32766")
+           (:AXIS "Easting" :EAST) (:AXIS "Northing" :NORTH))))
+(SETF (GETHASH 61206405 *DB*)
+        '((:GEOGCS "Greek (deg)"
+           (:DATUM "Greek"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6120"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61206405"))))
+(SETF (GETHASH 61216405 *DB*)
+        '((:GEOGCS "GGRS87 (deg)"
+           (:DATUM "Greek Geodetic Reference System 1987"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 -199.87 74.79 246.62 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6121"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61216405"))))
+(SETF (GETHASH 61226405 *DB*)
+        '((:GEOGCS "ATS77 (deg)"
+           (:DATUM "Average Terrestrial System 1977"
+            (:SPHEROID "Average Terrestrial System 1977" 6378135.0 298.257
+             (:AUTHORITY "EPSG" "7041"))
+            (:AUTHORITY "EPSG" "6122"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61226405"))))
+(SETF (GETHASH 61236405 *DB*)
+        '((:GEOGCS "KKJ (deg)"
+           (:DATUM "Kartastokoordinaattijarjestelma (1966)"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -96.062 -82.428 -121.753 4.801 -0.345 1.376
+             0.30857215014565614)
+            (:AUTHORITY "EPSG" "6123"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61236405"))))
+(SETF (GETHASH 61246405 *DB*)
+        '((:GEOGCS "RT90 (deg)"
+           (:DATUM "Rikets koordinatsystem 1990"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 414.1 41.3 603.1 -0.855 -2.141 7.023 0.0)
+            (:AUTHORITY "EPSG" "6124"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61246405"))))
+(SETF (GETHASH 61266405 *DB*)
+        '((:GEOGCS "LKS94 (ETRS89) (deg)"
+           (:DATUM "Lithuania 1994 (ETRS89)"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6126"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61266405"))))
+(SETF (GETHASH 61266413 *DB*)
+        '((:GEOGCS "LKS94 (ETRS89) (3D deg)"
+           (:DATUM "Lithuania 1994 (ETRS89)"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6126"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61266413"))))
+(SETF (GETHASH 61276405 *DB*)
+        '((:GEOGCS "Tete (deg)"
+           (:DATUM "Tete"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 -82.875 -57.097 -156.768 -2.158 -1.524 0.982
+             -0.07404906544270759)
+            (:AUTHORITY "EPSG" "6127"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61276405"))))
+(SETF (GETHASH 61286405 *DB*)
+        '((:GEOGCS "Madzansua (deg)"
+           (:DATUM "Madzansua"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6128"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61286405"))))
+(SETF (GETHASH 61296405 *DB*)
+        '((:GEOGCS "Observatario (deg)"
+           (:DATUM "Observatario"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6129"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61296405"))))
+(SETF (GETHASH 61306405 *DB*)
+        '((:GEOGCS "Moznet (deg)"
+           (:DATUM "Moznet (ITRF94)"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 -0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6130"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61306405"))))
+(SETF (GETHASH 61306413 *DB*)
+        '((:GEOGCS "Moznet (3D deg)"
+           (:DATUM "Moznet (ITRF94)"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 -0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6130"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61306413"))))
+(SETF (GETHASH 61316405 *DB*)
+        '((:GEOGCS "Indian 1960 (deg)"
+           (:DATUM "Indian 1960"
+            (:SPHEROID "Everest 1830 (1937 Adjustment)" 6377276.345 300.8017
+             (:AUTHORITY "EPSG" "7015"))
+            (:TOWGS84 182.0 915.0 344.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6131"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61316405"))))
+(SETF (GETHASH 61326405 *DB*)
+        '((:GEOGCS "FD58 (deg)"
+           (:DATUM "Final Datum 1958"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -244.72 -162.773 400.75 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6132"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61326405"))))
+(SETF (GETHASH 61336405 *DB*)
+        '((:GEOGCS "EST92 (deg)"
+           (:DATUM "Estonia 1992"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.055 -0.541 -0.185 0.0183 3.0e-4 0.007
+             -0.002887707287459349)
+            (:AUTHORITY "EPSG" "6133"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61336405"))))
+(SETF (GETHASH 61346405 *DB*)
+        '((:GEOGCS "PDO Survey Datum 1993 (deg)"
+           (:DATUM "PDO Survey Datum 1993"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -191.808 -250.512 167.861 -0.792 -1.653 8.558
+             4.270300283733636)
+            (:AUTHORITY "EPSG" "6134"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61346405"))))
+(SETF (GETHASH 61356405 *DB*)
+        '((:GEOGCS "Old Hawaiian (deg)"
+           (:DATUM "Old Hawaiian"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 58.0 -283.0 -182.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6135"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61356405"))))
+(SETF (GETHASH 61366405 *DB*)
+        '((:GEOGCS "St. Lawrence Island (deg)"
+           (:DATUM "St. Lawrence Island"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6136"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61366405"))))
+(SETF (GETHASH 61376405 *DB*)
+        '((:GEOGCS "St. Paul Island (deg)"
+           (:DATUM "St. Paul Island"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6137"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61376405"))))
+(SETF (GETHASH 61386405 *DB*)
+        '((:GEOGCS "St. George Island (deg)"
+           (:DATUM "St. George Island"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6138"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61386405"))))
+(SETF (GETHASH 61396405 *DB*)
+        '((:GEOGCS "Puerto Rico (deg)"
+           (:DATUM "Puerto Rico"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 11.0 72.0 -101.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6139"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61396405"))))
+(SETF (GETHASH 61406405 *DB*)
+        '((:GEOGCS "NAD83(CSRS) (deg)"
+           (:DATUM "NAD83 Canadian Spatial Reference System"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 -0.991 1.9072 0.5129 0.0257899075194932
+             -0.009650098960270402 -0.011659943232342112 0.0)
+            (:AUTHORITY "EPSG" "6140"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61406405"))))
+(SETF (GETHASH 61406413 *DB*)
+        '((:GEOGCS "NAD83(CSRS) (3D deg)"
+           (:DATUM "NAD83 Canadian Spatial Reference System"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 -0.991 1.9072 0.5129 0.0257899075194932
+             -0.009650098960270402 -0.011659943232342112 0.0)
+            (:AUTHORITY "EPSG" "6140"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61406413"))))
+(SETF (GETHASH 61416405 *DB*)
+        '((:GEOGCS "Israel (deg)"
+           (:DATUM "Israel"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 -48.0 55.0 52.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6141"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61416405"))))
+(SETF (GETHASH 61426405 *DB*)
+        '((:GEOGCS "Locodjo 1965 (deg)"
+           (:DATUM "Locodjo 1965"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -125.0 53.0 467.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6142"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61426405"))))
+(SETF (GETHASH 61436405 *DB*)
+        '((:GEOGCS "Abidjan 1987 (deg)"
+           (:DATUM "Abidjan 1987"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -124.76 53.0 466.79 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6143"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61436405"))))
+(SETF (GETHASH 61446405 *DB*)
+        '((:GEOGCS "Kalianpur 1937 (deg)"
+           (:DATUM "Kalianpur 1937"
+            (:SPHEROID "Everest 1830 (1937 Adjustment)" 6377276.345 300.8017
+             (:AUTHORITY "EPSG" "7015"))
+            (:TOWGS84 214.0 804.0 268.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6144"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61446405"))))
+(SETF (GETHASH 61456405 *DB*)
+        '((:GEOGCS "Kalianpur 1962 (deg)"
+           (:DATUM "Kalianpur 1962"
+            (:SPHEROID "Everest 1830 (1962 Definition)" 6377301.243 300.8017255
+             (:AUTHORITY "EPSG" "7044"))
+            (:TOWGS84 275.57 676.78 229.6 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6145"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61456405"))))
+(SETF (GETHASH 61466405 *DB*)
+        '((:GEOGCS "Kalianpur 1975 (deg)"
+           (:DATUM "Kalianpur 1975"
+            (:SPHEROID "Everest 1830 (1975 Definition)" 6377299.151 300.8017255
+             (:AUTHORITY "EPSG" "7045"))
+            (:TOWGS84 295.0 736.0 257.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6146"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61466405"))))
+(SETF (GETHASH 61476405 *DB*)
+        '((:GEOGCS "Hanoi 1972 (deg)"
+           (:DATUM "Hanoi 1972"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 -17.51 -108.32 -62.39 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6147"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61476405"))))
+(SETF (GETHASH 61486405 *DB*)
+        '((:GEOGCS "Hartebeesthoek94 (deg)"
+           (:DATUM "Hartebeesthoek94"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6148"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61486405"))))
+(SETF (GETHASH 61486413 *DB*)
+        '((:GEOGCS "Hartebeesthoek94 (3D deg)"
+           (:DATUM "Hartebeesthoek94"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6148"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61486413"))))
+(SETF (GETHASH 61496405 *DB*)
+        '((:GEOGCS "CH1903 (deg)"
+           (:DATUM "CH1903"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 674.4 15.1 405.3 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6149"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61496405"))))
+(SETF (GETHASH 61506405 *DB*)
+        '((:GEOGCS "CH1903+ (deg)"
+           (:DATUM "CH1903+"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 674.374 15.056 405.346 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6150"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61506405"))))
+(SETF (GETHASH 61516405 *DB*)
+        '((:GEOGCS "CHTRF95 (deg)"
+           (:DATUM "Swiss Terrestrial Reference Frame 1995"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6151"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61516405"))))
+(SETF (GETHASH 61516413 *DB*)
+        '((:GEOGCS "CHTRF95 (3D deg)"
+           (:DATUM "Swiss Terrestrial Reference Frame 1995"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6151"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61516413"))))
+(SETF (GETHASH 61526405 *DB*)
+        '((:GEOGCS "NAD83(HARN) (deg)"
+           (:DATUM "NAD83 (High Accuracy Regional Network)"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 -0.991 1.9072 0.5129 0.0257899075194932
+             -0.009650098960270402 -0.011659943232342112 0.0)
+            (:AUTHORITY "EPSG" "6152"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61526405"))))
+(SETF (GETHASH 61526413 *DB*)
+        '((:GEOGCS "NAD83(HARN) (3D deg)"
+           (:DATUM "NAD83 (High Accuracy Regional Network)"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 -0.991 1.9072 0.5129 0.0257899075194932
+             -0.009650098960270402 -0.011659943232342112 0.0)
+            (:AUTHORITY "EPSG" "6152"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61526413"))))
+(SETF (GETHASH 61536405 *DB*)
+        '((:GEOGCS "Rassadiran (deg)"
+           (:DATUM "Rassadiran"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -133.63 -157.5 -158.62 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6153"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61536405"))))
+(SETF (GETHASH 61546405 *DB*)
+        '((:GEOGCS "ED50(ED77) (deg)"
+           (:DATUM "European Datum 1950(1977)"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -123.02 -158.95 -168.47 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6154"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61546405"))))
+(SETF (GETHASH 61556405 *DB*)
+        '((:GEOGCS "Dabola 1981 (deg)"
+           (:DATUM "Dabola 1981"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -83.0 37.0 124.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6155"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61556405"))))
+(SETF (GETHASH 61566405 *DB*)
+        '((:GEOGCS "S-JTSK (deg)"
+           (:DATUM "Jednotne Trigonometricke Site Katastralni"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 559.0 68.7 451.5 7.92 4.073 4.251 1.1777720436709203)
+            (:AUTHORITY "EPSG" "6156"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61566405"))))
+(SETF (GETHASH 61576405 *DB*)
+        '((:GEOGCS "Mount Dillon (deg)"
+           (:DATUM "Mount Dillon"
+            (:SPHEROID "Clarke 1858" 6378293.645208759 294.26067636926103
+             (:AUTHORITY "EPSG" "7007"))
+            (:AUTHORITY "EPSG" "6157"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61576405"))))
+(SETF (GETHASH 61586405 *DB*)
+        '((:GEOGCS "Naparima 1955 (deg)"
+           (:DATUM "Naparima 1955"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -0.465 372.095 171.736 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6158"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61586405"))))
+(SETF (GETHASH 61596405 *DB*)
+        '((:GEOGCS "ELD79 (deg)"
+           (:DATUM "European Libyan Datum 1979"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -114.7 -98.5 -150.7 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6159"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61596405"))))
+(SETF (GETHASH 61606405 *DB*)
+        '((:GEOGCS "Chos Malal 1914 (deg)"
+           (:DATUM "Chos Malal 1914"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6160"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61606405"))))
+(SETF (GETHASH 61616405 *DB*)
+        '((:GEOGCS "Pampa del Castillo (deg)"
+           (:DATUM "Pampa del Castillo"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 27.5 14.0 186.4 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6161"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61616405"))))
+(SETF (GETHASH 61626405 *DB*)
+        '((:GEOGCS "Korean 1985 (deg)"
+           (:DATUM "Korean Datum 1985"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6162"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61626405"))))
+(SETF (GETHASH 61636405 *DB*)
+        '((:GEOGCS "Yemen NGN96 (deg)"
+           (:DATUM "Yemen National Geodetic Network 1996"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6163"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61636405"))))
+(SETF (GETHASH 61636413 *DB*)
+        '((:GEOGCS "Yemen NGN96 (3D deg)"
+           (:DATUM "Yemen National Geodetic Network 1996"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6163"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61636413"))))
+(SETF (GETHASH 61646405 *DB*)
+        '((:GEOGCS "South Yemen (deg)"
+           (:DATUM "South Yemen"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 -76.0 -138.0 67.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6164"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61646405"))))
+(SETF (GETHASH 61656405 *DB*)
+        '((:GEOGCS "Bissau (deg)"
+           (:DATUM "Bissau"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -173.0 253.0 27.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6165"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61656405"))))
+(SETF (GETHASH 61666405 *DB*)
+        '((:GEOGCS "Korean 1995 (deg)"
+           (:DATUM "Korean Datum 1995"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6166"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61666405"))))
+(SETF (GETHASH 61676405 *DB*)
+        '((:GEOGCS "NZGD2000 (deg)"
+           (:DATUM "New Zealand Geodetic Datum 2000"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6167"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61676405"))))
+(SETF (GETHASH 61676413 *DB*)
+        '((:GEOGCS "NZGD2000 (3D deg)"
+           (:DATUM "New Zealand Geodetic Datum 2000"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6167"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61676413"))))
+(SETF (GETHASH 61686405 *DB*)
+        '((:GEOGCS "Accra (deg)"
+           (:DATUM "Accra"
+            (:SPHEROID "War Office" 6378300.0 296.0 (:AUTHORITY "EPSG" "7029"))
+            (:TOWGS84 -199.0 32.0 322.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6168"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61686405"))))
+(SETF (GETHASH 61696405 *DB*)
+        '((:GEOGCS "American Samoa 1962 (deg)"
+           (:DATUM "American Samoa 1962"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 -115.0 118.0 426.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6169"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61696405"))))
+(SETF (GETHASH 61706405 *DB*)
+        '((:GEOGCS "SIRGAS (deg)"
+           (:DATUM
+            "Sistema de Referencia Geocentrico para America del Sur 1995"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6170"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61706405"))))
+(SETF (GETHASH 61706413 *DB*)
+        '((:GEOGCS "SIRGAS (3D deg)"
+           (:DATUM
+            "Sistema de Referencia Geocentrico para America del Sur 1995"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6170"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61706413"))))
+(SETF (GETHASH 61716405 *DB*)
+        '((:GEOGCS "RGF93 (deg)"
+           (:DATUM "Reseau Geodesique Francais 1993"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6171"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61716405"))))
+(SETF (GETHASH 61716413 *DB*)
+        '((:GEOGCS "RGF93 (3D deg)"
+           (:DATUM "Reseau Geodesique Francais 1993"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6171"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61716413"))))
+(SETF (GETHASH 61736405 *DB*)
+        '((:GEOGCS "IRENET95 (deg)"
+           (:DATUM "IRENET95"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6173"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61736405"))))
+(SETF (GETHASH 61736413 *DB*)
+        '((:GEOGCS "IRENET95 (3D deg)"
+           (:DATUM "IRENET95"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6173"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61736413"))))
+(SETF (GETHASH 61746405 *DB*)
+        '((:GEOGCS "Sierra Leone 1924 (deg)"
+           (:DATUM "Sierra Leone Colony 1924"
+            (:SPHEROID "War Office" 6378300.0 296.0 (:AUTHORITY "EPSG" "7029"))
+            (:AUTHORITY "EPSG" "6174"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61746405"))))
+(SETF (GETHASH 61756405 *DB*)
+        '((:GEOGCS "Sierra Leone 1968 (deg)"
+           (:DATUM "Sierra Leone 1968"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -88.0 4.0 101.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6175"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61756405"))))
+(SETF (GETHASH 61766405 *DB*)
+        '((:GEOGCS "Australian Antarctic (deg)"
+           (:DATUM "Australian Antarctic Datum 1998"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6176"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61766405"))))
+(SETF (GETHASH 61766413 *DB*)
+        '((:GEOGCS "Australian Antarctic (3D deg)"
+           (:DATUM "Australian Antarctic Datum 1998"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6176"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61766413"))))
+(SETF (GETHASH 61786405 *DB*)
+        '((:GEOGCS "Pulkovo 1942(83) (deg)"
+           (:DATUM "Pulkovo 1942/83"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 24.0 -123.0 -94.0 0.02 0.25 0.13 0.226891286871806)
+            (:AUTHORITY "EPSG" "6178"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61786405"))))
+(SETF (GETHASH 61796405 *DB*)
+        '((:GEOGCS "Pulkovo 1942(58) (deg)"
+           (:DATUM "Pulkovo 1942/58"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 33.4 -146.6 -76.3 -0.359 -0.053 0.844
+             -0.17326243724756094)
+            (:AUTHORITY "EPSG" "6179"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61796405"))))
+(SETF (GETHASH 61806405 *DB*)
+        '((:GEOGCS "EST97 (deg)"
+           (:DATUM "Estonia 1997"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6180"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61806405"))))
+(SETF (GETHASH 61806413 *DB*)
+        '((:GEOGCS "EST97 (3D deg)"
+           (:DATUM "Estonia 1997"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6180"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61806413"))))
+(SETF (GETHASH 61816405 *DB*)
+        '((:GEOGCS "Luxembourg 1930 (deg)"
+           (:DATUM "Luxembourg 1930"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -193.0 13.7 -39.3 -0.41 -2.933 2.688 0.08869386668625144)
+            (:AUTHORITY "EPSG" "6181"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61816405"))))
+(SETF (GETHASH 61826405 *DB*)
+        '((:GEOGCS "Azores Occidental 1939 (deg)"
+           (:DATUM "Azores Occidental Islands 1939"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -422.651 -172.995 84.02 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6182"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61826405"))))
+(SETF (GETHASH 61836405 *DB*)
+        '((:GEOGCS "Azores Central 1948 (deg)"
+           (:DATUM "Azores Central Islands 1948"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -104.0 167.0 -38.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6183"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61836405"))))
+(SETF (GETHASH 61846405 *DB*)
+        '((:GEOGCS "Azores Oriental 1940 (deg)"
+           (:DATUM "Azores Oriental Islands 1940"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -203.0 141.0 53.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6184"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61846405"))))
+(SETF (GETHASH 61886405 *DB*)
+        '((:GEOGCS "OSNI 1952 (deg)"
+           (:DATUM "OSNI 1952"
+            (:SPHEROID "Airy 1830" 6377563.396 299.3249646
+             (:AUTHORITY "EPSG" "7001"))
+            (:TOWGS84 482.5 -130.6 564.6 -1.042 -0.214 -0.631
+             1.6810581709138355)
+            (:AUTHORITY "EPSG" "6188"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61886405"))))
+(SETF (GETHASH 61896405 *DB*)
+        '((:GEOGCS "REGVEN (deg)"
+           (:DATUM "Red Geodesica Venezolana"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6189"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61896405"))))
+(SETF (GETHASH 61896413 *DB*)
+        '((:GEOGCS "REGVEN (3D deg)"
+           (:DATUM "Red Geodesica Venezolana"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6189"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61896413"))))
+(SETF (GETHASH 61906405 *DB*)
+        '((:GEOGCS "POSGAR 98 (deg)"
+           (:DATUM "Posiciones Geodesicas Argentinas 1998"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6190"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61906405"))))
+(SETF (GETHASH 61906413 *DB*)
+        '((:GEOGCS "POSGAR 98 (3D deg)"
+           (:DATUM "Posiciones Geodesicas Argentinas 1998"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6190"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "61906413"))))
+(SETF (GETHASH 61916405 *DB*)
+        '((:GEOGCS "Albanian 1987 (deg)"
+           (:DATUM "Albanian 1987"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:AUTHORITY "EPSG" "6191"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61916405"))))
+(SETF (GETHASH 61926405 *DB*)
+        '((:GEOGCS "Douala 1948 (deg)"
+           (:DATUM "Douala 1948"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -206.1 -174.7 -87.7 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6192"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61926405"))))
+(SETF (GETHASH 61936405 *DB*)
+        '((:GEOGCS "Manoca 1962 (deg)"
+           (:DATUM "Manoca 1962"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -70.9 -151.8 -41.4 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6193"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61936405"))))
+(SETF (GETHASH 61946405 *DB*)
+        '((:GEOGCS "Qornoq 1927 (deg)"
+           (:DATUM "Qornoq 1927"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 163.511 127.533 -159.789 0.0 0.0 0.814
+             -0.12375888374825782)
+            (:AUTHORITY "EPSG" "6194"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61946405"))))
+(SETF (GETHASH 61956405 *DB*)
+        '((:GEOGCS "Scoresbysund 1952 (deg)"
+           (:DATUM "Scoresbysund 1952"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 105.0 326.0 -102.5 0.0 0.0 0.814 -0.12375888374825782)
+            (:AUTHORITY "EPSG" "6195"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61956405"))))
+(SETF (GETHASH 61966405 *DB*)
+        '((:GEOGCS "Ammassalik 1958 (deg)"
+           (:DATUM "Ammassalik 1958"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -45.0 417.0 -3.5 0.0 0.0 0.814 -0.12375888374825782)
+            (:AUTHORITY "EPSG" "6196"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61966405"))))
+(SETF (GETHASH 61976405 *DB*)
+        '((:GEOGCS "Garoua (deg)"
+           (:DATUM "Garoua"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:AUTHORITY "EPSG" "6197"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61976405"))))
+(SETF (GETHASH 61986405 *DB*)
+        '((:GEOGCS "Kousseri (deg)"
+           (:DATUM "Kousseri"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:AUTHORITY "EPSG" "6198"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61986405"))))
+(SETF (GETHASH 61996405 *DB*)
+        '((:GEOGCS "Egypt 1930 (deg)"
+           (:DATUM "Egypt 1930"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6199"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "61996405"))))
+(SETF (GETHASH 62006405 *DB*)
+        '((:GEOGCS "Pulkovo 1995 (deg)"
+           (:DATUM "Pulkovo 1995"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:AUTHORITY "EPSG" "6200"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62006405"))))
+(SETF (GETHASH 62016405 *DB*)
+        '((:GEOGCS "Adindan (deg)"
+           (:DATUM "Adindan"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -165.0 -11.0 206.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6201"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62016405"))))
+(SETF (GETHASH 62026405 *DB*)
+        '((:GEOGCS "AGD66 (deg)"
+           (:DATUM "Australian Geodetic Datum 1966"
+            (:SPHEROID "Australian National Spheroid" 6378160.0 298.25
+             (:AUTHORITY "EPSG" "7003"))
+            (:TOWGS84 -124.133 -42.003 137.4 -0.008 -0.557 -0.178
+             -0.3824149507821167)
+            (:AUTHORITY "EPSG" "6202"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62026405"))))
+(SETF (GETHASH 62036405 *DB*)
+        '((:GEOGCS "AGD84 (deg)"
+           (:DATUM "Australian Geodetic Datum 1984"
+            (:SPHEROID "Australian National Spheroid" 6378160.0 298.25
+             (:AUTHORITY "EPSG" "7003"))
+            (:TOWGS84 -117.763 -51.51 139.061 0.292 -0.443 -0.277
+             -0.03939657799319541)
+            (:AUTHORITY "EPSG" "6203"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62036405"))))
+(SETF (GETHASH 62046405 *DB*)
+        '((:GEOGCS "Ain el Abd (deg)"
+           (:DATUM "Ain el Abd 1970"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -18.944 -379.364 -24.063 0.04 0.764 -6.431
+             0.7543103964456315)
+            (:AUTHORITY "EPSG" "6204"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62046405"))))
+(SETF (GETHASH 62056405 *DB*)
+        '((:GEOGCS "Afgooye (deg)"
+           (:DATUM "Afgooye"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 -43.0 -163.0 45.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6205"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62056405"))))
+(SETF (GETHASH 62066405 *DB*)
+        '((:GEOGCS "Agadez (deg)"
+           (:DATUM "Agadez"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:AUTHORITY "EPSG" "6206"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62066405"))))
+(SETF (GETHASH 62076405 *DB*)
+        '((:GEOGCS "Lisbon (deg)"
+           (:DATUM "Lisbon 1937"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -288.885 -91.744 126.244 -1.691 -0.41 0.211
+             -0.948405579124149)
+            (:AUTHORITY "EPSG" "6207"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62076405"))))
+(SETF (GETHASH 62086405 *DB*)
+        '((:GEOGCS "Aratu (deg)"
+           (:DATUM "Aratu"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -161.0 310.0 -145.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6208"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62086405"))))
+(SETF (GETHASH 62096405 *DB*)
+        '((:GEOGCS "Arc 1950 (deg)"
+           (:DATUM "Arc 1950"
+            (:SPHEROID "Clarke 1880 (Arc)" 6378249.145 293.4663077
+             (:AUTHORITY "EPSG" "7013"))
+            (:TOWGS84 -138.0 -105.0 -289.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6209"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62096405"))))
+(SETF (GETHASH 62106405 *DB*)
+        '((:GEOGCS "Arc 1960 (deg)"
+           (:DATUM "Arc 1960"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -157.0 -2.0 -299.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6210"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62106405"))))
+(SETF (GETHASH 62116405 *DB*)
+        '((:GEOGCS "Batavia (deg)"
+           (:DATUM "Batavia"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 -377.7 675.1 -52.2 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6211"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62116405"))))
+(SETF (GETHASH 62126405 *DB*)
+        '((:GEOGCS "Barbados 1938 (deg)"
+           (:DATUM "Barbados 1938"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 31.95 300.99 419.19 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6212"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62126405"))))
+(SETF (GETHASH 62136405 *DB*)
+        '((:GEOGCS "Beduaram (deg)"
+           (:DATUM "Beduaram"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -106.0 -87.0 188.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6213"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62136405"))))
+(SETF (GETHASH 62146405 *DB*)
+        '((:GEOGCS "Beijing 1954 (deg)"
+           (:DATUM "Beijing 1954"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 15.8 -154.4 -82.3 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6214"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62146405"))))
+(SETF (GETHASH 62156405 *DB*)
+        '((:GEOGCS "Belge 1950 (deg)"
+           (:DATUM "Reseau National Belge 1950"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6215"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62156405"))))
+(SETF (GETHASH 62166405 *DB*)
+        '((:GEOGCS "Bermuda 1957 (deg)"
+           (:DATUM "Bermuda 1957"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 -73.0 213.0 296.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6216"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62166405"))))
+(SETF (GETHASH 62186405 *DB*)
+        '((:GEOGCS "Bogota 1975 (deg)"
+           (:DATUM "Bogota 1975"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 304.5 306.5 -318.1 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6218"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62186405"))))
+(SETF (GETHASH 62196405 *DB*)
+        '((:GEOGCS "Bukit Rimpah (deg)"
+           (:DATUM "Bukit Rimpah"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 -384.0 664.0 -48.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6219"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62196405"))))
+(SETF (GETHASH 62206405 *DB*)
+        '((:GEOGCS "Camacupa (deg)"
+           (:DATUM "Camacupa"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -50.9 -347.6 -231.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6220"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62206405"))))
+(SETF (GETHASH 62216405 *DB*)
+        '((:GEOGCS "Campo Inchauspe (deg)"
+           (:DATUM "Campo Inchauspe"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -154.5 150.7 100.4 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6221"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62216405"))))
+(SETF (GETHASH 62226405 *DB*)
+        '((:GEOGCS "Cape (deg)"
+           (:DATUM "Cape"
+            (:SPHEROID "Clarke 1880 (Arc)" 6378249.145 293.4663077
+             (:AUTHORITY "EPSG" "7013"))
+            (:TOWGS84 -136.0 -108.0 -292.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6222"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62226405"))))
+(SETF (GETHASH 62236405 *DB*)
+        '((:GEOGCS "Carthage (deg)"
+           (:DATUM "Carthage"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -260.1 5.5 432.2 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6223"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62236405"))))
+(SETF (GETHASH 62246405 *DB*)
+        '((:GEOGCS "Chua (deg)"
+           (:DATUM "Chua"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -134.0 229.0 -29.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6224"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62246405"))))
+(SETF (GETHASH 62256405 *DB*)
+        '((:GEOGCS "Corrego Alegre (deg)"
+           (:DATUM "Corrego Alegre"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -206.0 172.0 -6.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6225"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62256405"))))
+(SETF (GETHASH 62276405 *DB*)
+        '((:GEOGCS "Deir ez Zor (deg)"
+           (:DATUM "Deir ez Zor"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -83.58 -397.54 458.78 -17.595 -2.847 4.256
+             0.6652040001468859)
+            (:AUTHORITY "EPSG" "6227"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62276405"))))
+(SETF (GETHASH 62296405 *DB*)
+        '((:GEOGCS "Egypt 1907 (deg)"
+           (:DATUM "Egypt 1907"
+            (:SPHEROID "Helmert 1906" 6378200.0 298.3
+             (:AUTHORITY "EPSG" "7020"))
+            (:TOWGS84 -130.0 110.0 -13.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6229"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62296405"))))
+(SETF (GETHASH 62306405 *DB*)
+        '((:GEOGCS "ED50 (deg)"
+           (:DATUM "European Datum 1950"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -157.89 -17.16 -78.41 2.118 2.697 -1.434
+             -1.1097046576093785)
+            (:AUTHORITY "EPSG" "6230"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62306405"))))
+(SETF (GETHASH 62316405 *DB*)
+        '((:GEOGCS "ED87 (deg)"
+           (:DATUM "European Datum 1987"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -82.981 -99.719 -110.709 -0.10470001565102613
+             0.031001600378938583 0.08040202147511816 -0.06482902860346239)
+            (:AUTHORITY "EPSG" "6231"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62316405"))))
+(SETF (GETHASH 62326405 *DB*)
+        '((:GEOGCS "Fahud (deg)"
+           (:DATUM "Fahud"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -346.0 -1.0 224.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6232"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62326405"))))
+(SETF (GETHASH 62336405 *DB*)
+        '((:GEOGCS "Gandajika 1970 (deg)"
+           (:DATUM "Gandajika 1970"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -133.0 -321.0 50.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6233"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62336405"))))
+(SETF (GETHASH 62366405 *DB*)
+        '((:GEOGCS "Hu Tzu Shan (deg)"
+           (:DATUM "Hu Tzu Shan"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -637.0 -549.0 -203.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6236"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62366405"))))
+(SETF (GETHASH 62376405 *DB*)
+        '((:GEOGCS "HD72 (deg)"
+           (:DATUM "Hungarian Datum 1972"
+            (:SPHEROID "GRS 1967" 6378160.0 298.247167427
+             (:AUTHORITY "EPSG" "7036"))
+            (:TOWGS84 57.01 -69.97 -9.29 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6237"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62376405"))))
+(SETF (GETHASH 62386405 *DB*)
+        '((:GEOGCS "ID74 (deg)"
+           (:DATUM "Indonesian Datum 1974"
+            (:SPHEROID "Indonesian National Spheroid" 6378160.0 298.247
+             (:AUTHORITY "EPSG" "7021"))
+            (:TOWGS84 -1.977 -13.06 -9.993 0.364 -0.254 -0.689
+             -0.2138966040782389)
+            (:AUTHORITY "EPSG" "6238"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62386405"))))
+(SETF (GETHASH 62396405 *DB*)
+        '((:GEOGCS "Indian 1954 (deg)"
+           (:DATUM "Indian 1954"
+            (:SPHEROID "Everest 1830 (1937 Adjustment)" 6377276.345 300.8017
+             (:AUTHORITY "EPSG" "7015"))
+            (:TOWGS84 217.0 823.0 299.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6239"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62396405"))))
+(SETF (GETHASH 62406405 *DB*)
+        '((:GEOGCS "Indian 1975 (deg)"
+           (:DATUM "Indian 1975"
+            (:SPHEROID "Everest 1830 (1937 Adjustment)" 6377276.345 300.8017
+             (:AUTHORITY "EPSG" "7015"))
+            (:TOWGS84 204.64 834.74 293.8 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6240"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62406405"))))
+(SETF (GETHASH 62416405 *DB*)
+        '((:GEOGCS "Jamaica 1875 (deg)"
+           (:DATUM "Jamaica 1875"
+            (:SPHEROID "Clarke 1880" 6378249.144808011 293.465
+             (:AUTHORITY "EPSG" "7034"))
+            (:AUTHORITY "EPSG" "6241"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62416405"))))
+(SETF (GETHASH 62426405 *DB*)
+        '((:GEOGCS "JAD69 (deg)"
+           (:DATUM "Jamaica 1969"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 -33.722 153.789 94.959 -8.581 4.478 -4.54
+             1.8460700159115124)
+            (:AUTHORITY "EPSG" "6242"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62426405"))))
+(SETF (GETHASH 62436405 *DB*)
+        '((:GEOGCS "Kalianpur 1880 (deg)"
+           (:DATUM "Kalianpur 1880"
+            (:SPHEROID "Everest (1830 Definition)" 6377299.36559538 300.8017
+             (:AUTHORITY "EPSG" "7042"))
+            (:AUTHORITY "EPSG" "6243"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62436405"))))
+(SETF (GETHASH 62446405 *DB*)
+        '((:GEOGCS "Kandawala (deg)"
+           (:DATUM "Kandawala"
+            (:SPHEROID "Everest 1830 (1937 Adjustment)" 6377276.345 300.8017
+             (:AUTHORITY "EPSG" "7015"))
+            (:TOWGS84 -97.0 787.0 86.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6244"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62446405"))))
+(SETF (GETHASH 62456405 *DB*)
+        '((:GEOGCS "Kertau (deg)"
+           (:DATUM "Kertau 1968"
+            (:SPHEROID "Everest 1830 Modified" 6377304.063 300.8017
+             (:AUTHORITY "EPSG" "7018"))
+            (:TOWGS84 -11.0 851.0 5.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6245"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62456405"))))
+(SETF (GETHASH 62466405 *DB*)
+        '((:GEOGCS "KOC (deg)"
+           (:DATUM "Kuwait Oil Company"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -294.7 -200.1 525.5 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6246"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62466405"))))
+(SETF (GETHASH 62476405 *DB*)
+        '((:GEOGCS "La Canoa (deg)"
+           (:DATUM "La Canoa"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -273.5 110.6 -357.9 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6247"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62476405"))))
+(SETF (GETHASH 62486405 *DB*)
+        '((:GEOGCS "PSAD56 (deg)"
+           (:DATUM "Provisional South American Datum 1956"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -307.7 265.3 -363.5 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6248"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62486405"))))
+(SETF (GETHASH 62496405 *DB*)
+        '((:GEOGCS "Lake (deg)"
+           (:DATUM "Lake"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6249"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62496405"))))
+(SETF (GETHASH 62506405 *DB*)
+        '((:GEOGCS "Leigon (deg)"
+           (:DATUM "Leigon"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -130.0 29.0 364.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6250"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62506405"))))
+(SETF (GETHASH 62516405 *DB*)
+        '((:GEOGCS "Liberia 1964 (deg)"
+           (:DATUM "Liberia 1964"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -90.0 40.0 88.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6251"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62516405"))))
+(SETF (GETHASH 62526405 *DB*)
+        '((:GEOGCS "Lome (deg)"
+           (:DATUM "Lome"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:AUTHORITY "EPSG" "6252"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62526405"))))
+(SETF (GETHASH 62536405 *DB*)
+        '((:GEOGCS "Luzon 1911 (deg)"
+           (:DATUM "Luzon 1911"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 -133.0 -77.0 -51.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6253"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62536405"))))
+(SETF (GETHASH 62546405 *DB*)
+        '((:GEOGCS "Hito XVIII 1963 (deg)"
+           (:DATUM "Hito XVIII 1963"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 18.38 192.45 96.82 0.056 -0.142 -0.2
+             -2.681442481212253e-4)
+            (:AUTHORITY "EPSG" "6254"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62546405"))))
+(SETF (GETHASH 62556405 *DB*)
+        '((:GEOGCS "Herat North (deg)"
+           (:DATUM "Herat North"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -333.0 -222.0 114.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6255"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62556405"))))
+(SETF (GETHASH 62566405 *DB*)
+        '((:GEOGCS "Mahe 1971 (deg)"
+           (:DATUM "Mahe 1971"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 41.0 -220.0 -134.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6256"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62566405"))))
+(SETF (GETHASH 62576405 *DB*)
+        '((:GEOGCS "Makassar (deg)"
+           (:DATUM "Makassar"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 -587.8 519.75 145.76 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6257"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62576405"))))
+(SETF (GETHASH 62586405 *DB*)
+        '((:GEOGCS "ETRS89 (deg)"
+           (:DATUM "European Terrestrial Reference System 1989"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6258"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62586405"))))
+(SETF (GETHASH 62586413 *DB*)
+        '((:GEOGCS "ETRS89 (3D deg)"
+           (:DATUM "European Terrestrial Reference System 1989"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6258"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "62586413"))))
+(SETF (GETHASH 62596405 *DB*)
+        '((:GEOGCS "Malongo 1987 (deg)"
+           (:DATUM "Malongo 1987"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -254.1 -5.36 -100.29 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6259"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62596405"))))
+(SETF (GETHASH 62616405 *DB*)
+        '((:GEOGCS "Merchich (deg)"
+           (:DATUM "Merchich"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 31.0 146.0 47.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6261"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62616405"))))
+(SETF (GETHASH 62626405 *DB*)
+        '((:GEOGCS "Massawa (deg)"
+           (:DATUM "Massawa"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 639.0 405.0 60.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6262"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62626405"))))
+(SETF (GETHASH 62636405 *DB*)
+        '((:GEOGCS "Minna (deg)"
+           (:DATUM "Minna"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -90.2 -87.32 114.17 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6263"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62636405"))))
+(SETF (GETHASH 62646405 *DB*)
+        '((:GEOGCS "Mhast (deg)"
+           (:DATUM "Mhast"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -252.95 -4.11 -96.38 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6264"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62646405"))))
+(SETF (GETHASH 62656405 *DB*)
+        '((:GEOGCS "Monte Mario (deg)"
+           (:DATUM "Monte Mario"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -50.2 -50.4 84.8 -0.69 -2.012 0.459 -5.791915759418465)
+            (:AUTHORITY "EPSG" "6265"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62656405"))))
+(SETF (GETHASH 62666405 *DB*)
+        '((:GEOGCS "M'poraloko (deg)"
+           (:DATUM "M'poraloko"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -80.7 -132.5 41.1 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6266"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62666405"))))
+(SETF (GETHASH 62676405 *DB*)
+        '((:GEOGCS "NAD27 (deg)"
+           (:DATUM "North American Datum 1927"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 -4.2 135.4 181.9 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6267"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62676405"))))
+(SETF (GETHASH 62686405 *DB*)
+        '((:GEOGCS "NAD27 Michigan (deg)"
+           (:DATUM "NAD Michigan"
+            (:SPHEROID "Clarke 1866 Michigan" 6378450.047548896
+             294.978697164674 (:AUTHORITY "EPSG" "7009"))
+            (:AUTHORITY "EPSG" "6268"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62686405"))))
+(SETF (GETHASH 62696405 *DB*)
+        '((:GEOGCS "NAD83 (deg)"
+           (:DATUM "North American Datum 1983"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 1.0 1.0 -1.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6269"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62696405"))))
+(SETF (GETHASH 62706405 *DB*)
+        '((:GEOGCS "Nahrwan 1967 (deg)"
+           (:DATUM "Nahrwan 1967"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -245.0 -153.9 382.8 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6270"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62706405"))))
+(SETF (GETHASH 62716405 *DB*)
+        '((:GEOGCS "Naparima 1972 (deg)"
+           (:DATUM "Naparima 1972"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -2.0 374.0 172.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6271"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62716405"))))
+(SETF (GETHASH 62726405 *DB*)
+        '((:GEOGCS "NZGD49 (deg)"
+           (:DATUM "New Zealand Geodetic Datum 1949"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 59.47 -5.04 187.44 0.47 0.1 -1.024 -0.9486737233722704)
+            (:AUTHORITY "EPSG" "6272"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62726405"))))
+(SETF (GETHASH 62736405 *DB*)
+        '((:GEOGCS "NGO 1948 (deg)"
+           (:DATUM "NGO 1948"
+            (:SPHEROID "Bessel Modified" 6377492.018 299.1528128
+             (:AUTHORITY "EPSG" "7005"))
+            (:TOWGS84 278.3 93.0 474.5 7.889 0.05 -6.61 1.2809044467944684)
+            (:AUTHORITY "EPSG" "6273"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62736405"))))
+(SETF (GETHASH 62746405 *DB*)
+        '((:GEOGCS "Datum 73 (deg)"
+           (:DATUM "Datum 73"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -239.749 88.181 30.488 0.263 -0.082 -1.211
+             0.4597642531247778)
+            (:AUTHORITY "EPSG" "6274"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62746405"))))
+(SETF (GETHASH 62756405 *DB*)
+        '((:GEOGCS "NTF (deg)"
+           (:DATUM "Nouvelle Triangulation Francaise"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -168.0 -60.0 320.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6275"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62756405"))))
+(SETF (GETHASH 62766405 *DB*)
+        '((:GEOGCS "NSWC 9Z-2 (deg)"
+           (:DATUM "NSWC 9Z-2"
+            (:SPHEROID "NWL 9D" 6378145.0 298.25 (:AUTHORITY "EPSG" "7025"))
+            (:AUTHORITY "EPSG" "6276"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62766405"))))
+(SETF (GETHASH 62776405 *DB*)
+        '((:GEOGCS "OSGB 1936 (deg)"
+           (:DATUM "OSGB 1936"
+            (:SPHEROID "Airy 1830" 6377563.396 299.3249646
+             (:AUTHORITY "EPSG" "7001"))
+            (:TOWGS84 446.448 -125.157 542.06 0.15 0.247 0.842
+             -4.2261596151967575)
+            (:AUTHORITY "EPSG" "6277"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62776405"))))
+(SETF (GETHASH 62786405 *DB*)
+        '((:GEOGCS "OSGB70 (deg)"
+           (:DATUM "OSGB 1970 (SN)"
+            (:SPHEROID "Airy 1830" 6377563.396 299.3249646
+             (:AUTHORITY "EPSG" "7001"))
+            (:AUTHORITY "EPSG" "6278"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62786405"))))
+(SETF (GETHASH 62796405 *DB*)
+        '((:GEOGCS "OS(SN)80 (deg)"
+           (:DATUM "OS (SN) 1980"
+            (:SPHEROID "Airy 1830" 6377563.396 299.3249646
+             (:AUTHORITY "EPSG" "7001"))
+            (:AUTHORITY "EPSG" "6279"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62796405"))))
+(SETF (GETHASH 62806405 *DB*)
+        '((:GEOGCS "Padang (deg)"
+           (:DATUM "Padang 1884"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6280"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62806405"))))
+(SETF (GETHASH 62816405 *DB*)
+        '((:GEOGCS "Palestine 1923 (deg)"
+           (:DATUM "Palestine 1923"
+            (:SPHEROID "Clarke 1880 (Benoit)" 6378300.789 293.4663155389811
+             (:AUTHORITY "EPSG" "7010"))
+            (:TOWGS84 -275.7224 94.7824 340.8944 -8.001 -4.42 -11.821
+             0.20626480624709637)
+            (:AUTHORITY "EPSG" "6281"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62816405"))))
+(SETF (GETHASH 62826405 *DB*)
+        '((:GEOGCS "Pointe Noire (deg)"
+           (:DATUM "Congo 1960 Pointe Noire"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -178.3 -316.7 -131.5 5.278 6.077 10.979
+             3.953271276531849)
+            (:AUTHORITY "EPSG" "6282"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62826405"))))
+(SETF (GETHASH 62836405 *DB*)
+        '((:GEOGCS "GDA94 (deg)"
+           (:DATUM "Geocentric Datum of Australia 1994"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6283"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62836405"))))
+(SETF (GETHASH 62836413 *DB*)
+        '((:GEOGCS "GDA94 (3D deg)"
+           (:DATUM "Geocentric Datum of Australia 1994"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6283"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "62836413"))))
+(SETF (GETHASH 62846405 *DB*)
+        '((:GEOGCS "Pulkovo 1942 (deg)"
+           (:DATUM "Pulkovo 1942"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 -40.595 -18.55 -69.339 2.508 -1.832 2.611
+             -0.8867324020562674)
+            (:AUTHORITY "EPSG" "6284"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62846405"))))
+(SETF (GETHASH 62856405 *DB*)
+        '((:GEOGCS "Qatar 1974 (deg)"
+           (:DATUM "Qatar 1974"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -128.033 -283.697 21.052 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6285"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62856405"))))
+(SETF (GETHASH 62866405 *DB*)
+        '((:GEOGCS "Qatar 1948 (deg)"
+           (:DATUM "Qatar 1948"
+            (:SPHEROID "Helmert 1906" 6378200.0 298.3
+             (:AUTHORITY "EPSG" "7020"))
+            (:AUTHORITY "EPSG" "6286"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62866405"))))
+(SETF (GETHASH 62886405 *DB*)
+        '((:GEOGCS "Loma Quintana (deg)"
+           (:DATUM "Loma Quintana"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6288"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62886405"))))
+(SETF (GETHASH 62896405 *DB*)
+        '((:GEOGCS "Amersfoort (deg)"
+           (:DATUM "Amersfoort"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 565.04 49.91 465.84 -0.40939438743923684
+             -0.35970519561431136 1.868491000350572 0.8409828680306614)
+            (:AUTHORITY "EPSG" "6289"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62896405"))))
+(SETF (GETHASH 62926405 *DB*)
+        '((:GEOGCS "Sapper Hill 1943 (deg)"
+           (:DATUM "Sapper Hill 1943"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -355.0 21.0 72.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6292"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62926405"))))
+(SETF (GETHASH 62936405 *DB*)
+        '((:GEOGCS "Schwarzeck (deg)"
+           (:DATUM "Schwarzeck"
+            (:SPHEROID "Bessel Namibia (GLM)" 6377483.865280419 299.1528128
+             (:AUTHORITY "EPSG" "7046"))
+            (:TOWGS84 616.0 97.0 -251.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6293"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62936405"))))
+(SETF (GETHASH 62956405 *DB*)
+        '((:GEOGCS "Serindung (deg)"
+           (:DATUM "Serindung"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6295"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62956405"))))
+(SETF (GETHASH 62976405 *DB*)
+        '((:GEOGCS "Tananarive (deg)"
+           (:DATUM "Tananarive 1925"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -189.0 -242.0 -91.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6297"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62976405"))))
+(SETF (GETHASH 62986405 *DB*)
+        '((:GEOGCS "Timbalai 1948 (deg)"
+           (:DATUM "Timbalai 1948"
+            (:SPHEROID "Everest 1830 (1967 Definition)" 6377298.556 300.8017
+             (:AUTHORITY "EPSG" "7016"))
+            (:TOWGS84 -533.4 669.2 -52.5 0.0 0.0 4.28 1.9388891787227058)
+            (:AUTHORITY "EPSG" "6298"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62986405"))))
+(SETF (GETHASH 62996405 *DB*)
+        '((:GEOGCS "TM65 (deg)"
+           (:DATUM "TM65"
+            (:SPHEROID "Airy Modified 1849" 6377340.189 299.3249646
+             (:AUTHORITY "EPSG" "7002"))
+            (:TOWGS84 482.5 -130.6 564.6 -1.042 -0.214 -0.631
+             1.6810581709138355)
+            (:AUTHORITY "EPSG" "6299"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "62996405"))))
+(SETF (GETHASH 63006405 *DB*)
+        '((:GEOGCS "TM75 (deg)"
+           (:DATUM "Geodetic Datum of 1965"
+            (:SPHEROID "Airy Modified 1849" 6377340.189 299.3249646
+             (:AUTHORITY "EPSG" "7002"))
+            (:TOWGS84 482.5 -130.6 564.6 -1.042 -0.214 -0.631
+             1.6810581709138355)
+            (:AUTHORITY "EPSG" "6300"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63006405"))))
+(SETF (GETHASH 63016405 *DB*)
+        '((:GEOGCS "Tokyo (deg)"
+           (:DATUM "Tokyo"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 -147.0 506.0 687.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6301"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63016405"))))
+(SETF (GETHASH 63026405 *DB*)
+        '((:GEOGCS "Trinidad 1903 (deg)"
+           (:DATUM "Trinidad 1903"
+            (:SPHEROID "Clarke 1858" 6378293.645208759 294.26067636926103
+             (:AUTHORITY "EPSG" "7007"))
+            (:TOWGS84 -61.702 284.488 472.052 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6302"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63026405"))))
+(SETF (GETHASH 63036405 *DB*)
+        '((:GEOGCS "TC(1948) (deg)"
+           (:DATUM "Trucial Coast 1948"
+            (:SPHEROID "Helmert 1906" 6378200.0 298.3
+             (:AUTHORITY "EPSG" "7020"))
+            (:AUTHORITY "EPSG" "6303"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63036405"))))
+(SETF (GETHASH 63046405 *DB*)
+        '((:GEOGCS "Voirol 1875 (deg)"
+           (:DATUM "Voirol 1875"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -73.0 -247.0 227.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6304"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63046405"))))
+(SETF (GETHASH 63066405 *DB*)
+        '((:GEOGCS "Bern 1938 (deg)"
+           (:DATUM "Bern 1938"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6306"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63066405"))))
+(SETF (GETHASH 63076405 *DB*)
+        '((:GEOGCS "Nord Sahara 1959 (deg)"
+           (:DATUM "Nord Sahara 1959"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -169.559 -72.34 303.102 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6307"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63076405"))))
+(SETF (GETHASH 63086405 *DB*)
+        '((:GEOGCS "RT38 (deg)"
+           (:DATUM "Stockholm 1938"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6308"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63086405"))))
+(SETF (GETHASH 63096405 *DB*)
+        '((:GEOGCS "Yacare (deg)"
+           (:DATUM "Yacare"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -155.0 171.0 37.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6309"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63096405"))))
+(SETF (GETHASH 63106405 *DB*)
+        '((:GEOGCS "Yoff (deg)"
+           (:DATUM "Yoff"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:AUTHORITY "EPSG" "6310"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63106405"))))
+(SETF (GETHASH 63116405 *DB*)
+        '((:GEOGCS "Zanderij (deg)"
+           (:DATUM "Zanderij"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -265.0 120.0 -358.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6311"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63116405"))))
+(SETF (GETHASH 63126405 *DB*)
+        '((:GEOGCS "MGI (deg)"
+           (:DATUM "Militar-Geographische Institut"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 426.9 142.6 460.1 4.91 4.49 -12.42 3.5271281868253483)
+            (:AUTHORITY "EPSG" "6312"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63126405"))))
+(SETF (GETHASH 63136405 *DB*)
+        '((:GEOGCS "Belge 1972 (deg)"
+           (:DATUM "Reseau National Belge 1972"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -106.8686 52.2978 -103.7239 0.3366 0.457 -1.8422
+             0.26292574852317374)
+            (:AUTHORITY "EPSG" "6313"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63136405"))))
+(SETF (GETHASH 63146405 *DB*)
+        '((:GEOGCS "DHDN (deg)"
+           (:DATUM "Deutsches Hauptdreiecksnetz"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 612.4 77.0 440.2 -0.054 0.057 -2.797 0.5259752559300956)
+            (:AUTHORITY "EPSG" "6314"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63146405"))))
+(SETF (GETHASH 63156405 *DB*)
+        '((:GEOGCS "Conakry 1905 (deg)"
+           (:DATUM "Conakry 1905"
+            (:SPHEROID "Clarke 1880 (IGN)" 6378249.2 293.4660212936269
+             (:AUTHORITY "EPSG" "7011"))
+            (:TOWGS84 -23.0 259.0 -9.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6315"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63156405"))))
+(SETF (GETHASH 63166405 *DB*)
+        '((:GEOGCS "Dealul Piscului 1933 (deg)"
+           (:DATUM "Dealul Piscului 1933"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 103.25 -100.4 -307.19 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6316"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63166405"))))
+(SETF (GETHASH 63176405 *DB*)
+        '((:GEOGCS "Dealul Piscului 1970 (deg)"
+           (:DATUM "Dealul Piscului 1970"
+            (:SPHEROID "Krassowsky 1940" 6378245.0 298.3
+             (:AUTHORITY "EPSG" "7024"))
+            (:TOWGS84 28.0 -121.0 -77.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6317"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63176405"))))
+(SETF (GETHASH 63186405 *DB*)
+        '((:GEOGCS "NGN (deg)"
+           (:DATUM "National Geodetic Network"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 -3.2 -5.7 2.8 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6318"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63186405"))))
+(SETF (GETHASH 63196405 *DB*)
+        '((:GEOGCS "KUDAMS (deg)"
+           (:DATUM "Kuwait Utility"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 226.702 -193.337 -35.371 -2.229 4.391 -9.238
+             0.20209825716090501)
+            (:AUTHORITY "EPSG" "6319"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63196405"))))
+(SETF (GETHASH 63226405 *DB*)
+        '((:GEOGCS "WGS 72 (deg)"
+           (:DATUM "World Geodetic System 1972"
+            (:SPHEROID "WGS 72" 6378135.0 298.26 (:AUTHORITY "EPSG" "7043"))
+            (:TOWGS84 0.0 0.0 4.5 0.0 0.0 0.554 0.045171992568114105)
+            (:AUTHORITY "EPSG" "6322"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63226405"))))
+(SETF (GETHASH 63246405 *DB*)
+        '((:GEOGCS "WGS 72BE (deg)"
+           (:DATUM "WGS 72 Transit Broadcast Ephemeris"
+            (:SPHEROID "WGS 72" 6378135.0 298.26 (:AUTHORITY "EPSG" "7043"))
+            (:TOWGS84 0.0 0.0 1.9 0.0 0.0 0.814 -0.07838062637389662)
+            (:AUTHORITY "EPSG" "6324"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63246405"))))
+(SETF (GETHASH 63266405 *DB*)
+        '((:GEOGCS "WGS 84 (deg)"
+           (:DATUM "World Geodetic System 1984"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:AUTHORITY "EPSG" "6326"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63266405"))))
+(SETF (GETHASH 63266411 *DB*)
+        '((:GEOGCS "WGS 84 (DMS)"
+           (:DATUM "World Geodetic System 1984"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:AUTHORITY "EPSG" "6326"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "DMS" 4.84813681109536e-6) (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "63266411"))))
+(SETF (GETHASH 63266413 *DB*)
+        '((:GEOGCS "WGS 84 (3D deg)"
+           (:DATUM "World Geodetic System 1984"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:AUTHORITY "EPSG" "6326"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "63266413"))))
+(SETF (GETHASH 63266419 *DB*)
+        '((:GEOGCS "WGS 84 (3D DMS)"
+           (:DATUM "World Geodetic System 1984"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:AUTHORITY "EPSG" "6326"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "DMS" 4.84813681109536e-6) (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "63266419"))))
+(SETF (GETHASH 66006405 *DB*)
+        '((:GEOGCS "Anguilla 1957 (deg)"
+           (:DATUM "Anguilla 1957"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:AUTHORITY "EPSG" "6600"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66006405"))))
+(SETF (GETHASH 66016405 *DB*)
+        '((:GEOGCS "Antigua 1943 (deg)"
+           (:DATUM "Antigua 1943"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -255.0 -15.0 71.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6601"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66016405"))))
+(SETF (GETHASH 66026405 *DB*)
+        '((:GEOGCS "Dominica 1945 (deg)"
+           (:DATUM "Dominica 1945"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 725.0 685.0 536.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6602"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66026405"))))
+(SETF (GETHASH 66036405 *DB*)
+        '((:GEOGCS "Grenada 1953 (deg)"
+           (:DATUM "Grenada 1953"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 72.0 213.7 93.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6603"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66036405"))))
+(SETF (GETHASH 66046405 *DB*)
+        '((:GEOGCS "Montserrat 1958 (deg)"
+           (:DATUM "Montserrat 1958"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 174.0 359.0 365.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6604"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66046405"))))
+(SETF (GETHASH 66056405 *DB*)
+        '((:GEOGCS "St. Kitts 1955 (deg)"
+           (:DATUM "St. Kitts 1955"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 9.0 183.0 236.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6605"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66056405"))))
+(SETF (GETHASH 66066405 *DB*)
+        '((:GEOGCS "St. Lucia 1955 (deg)"
+           (:DATUM "St. Lucia 1955"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -149.0 128.0 296.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6606"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66066405"))))
+(SETF (GETHASH 66076405 *DB*)
+        '((:GEOGCS "St. Vincent 1945 (deg)"
+           (:DATUM "St. Vincent 1945"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 195.671 332.517 274.607 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6607"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66076405"))))
+(SETF (GETHASH 66086405 *DB*)
+        '((:GEOGCS "NAD27(76) (deg)"
+           (:DATUM "North American Datum 1927 (1976)"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6608"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66086405"))))
+(SETF (GETHASH 66096405 *DB*)
+        '((:GEOGCS "NAD27(CGQ77) (deg)"
+           (:DATUM "North American Datum 1927 (CGQ77)"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:AUTHORITY "EPSG" "6609"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66096405"))))
+(SETF (GETHASH 66106405 *DB*)
+        '((:GEOGCS "Xian 1980 (deg)"
+           (:DATUM "Xian 1980"
+            (:SPHEROID "Xian 1980" 6378140.0 298.257
+             (:AUTHORITY "EPSG" "7049"))
+            (:AUTHORITY "EPSG" "6610"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66106405"))))
+(SETF (GETHASH 66116405 *DB*)
+        '((:GEOGCS "Hong Kong 1980 (deg)"
+           (:DATUM "Hong Kong 1980"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -162.619 -276.959 -161.764 0.067753 -2.243649 -1.158827
+             -0.22570443917666022)
+            (:AUTHORITY "EPSG" "6611"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66116405"))))
+(SETF (GETHASH 66126405 *DB*)
+        '((:GEOGCS "JGD2000 (deg)"
+           (:DATUM "Japanese Geodetic Datum 2000"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6612"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66126405"))))
+(SETF (GETHASH 66126413 *DB*)
+        '((:GEOGCS "JGD2000 (3D deg)"
+           (:DATUM "Japanese Geodetic Datum 2000"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6612"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66126413"))))
+(SETF (GETHASH 66136405 *DB*)
+        '((:GEOGCS "Segara (deg)"
+           (:DATUM "Gunung Segara"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 -404.78 685.68 45.47 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6613"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66136405"))))
+(SETF (GETHASH 66146405 *DB*)
+        '((:GEOGCS "QND95 (deg)"
+           (:DATUM "Qatar National Datum 1995"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -119.4248 -303.65872 -11.00061 1.164298 0.174458 1.096259
+             0.7543238036580374)
+            (:AUTHORITY "EPSG" "6614"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66146405"))))
+(SETF (GETHASH 66156405 *DB*)
+        '((:GEOGCS "Porto Santo (deg)"
+           (:DATUM "Porto Santo 1936"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -499.0 -249.0 314.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6615"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66156405"))))
+(SETF (GETHASH 66166405 *DB*)
+        '((:GEOGCS "Selvagem Grande (deg)"
+           (:DATUM "Selvagem Grande"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -289.0 -124.0 60.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6616"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66166405"))))
+(SETF (GETHASH 66186405 *DB*)
+        '((:GEOGCS "SAD69 (deg)"
+           (:DATUM "South American Datum 1969"
+            (:SPHEROID "GRS 1967 (SAD69)" 6378160.0 298.25
+             (:AUTHORITY "EPSG" "7050"))
+            (:TOWGS84 -66.87 4.37 -38.52 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6618"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66186405"))))
+(SETF (GETHASH 66196405 *DB*)
+        '((:GEOGCS "SWEREF99 (deg)"
+           (:DATUM "SWEREF99"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6619"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66196405"))))
+(SETF (GETHASH 66196413 *DB*)
+        '((:GEOGCS "SWEREF99 (3D deg)"
+           (:DATUM "SWEREF99"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6619"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66196413"))))
+(SETF (GETHASH 66206405 *DB*)
+        '((:GEOGCS "Point 58 (deg)"
+           (:DATUM "Point 58"
+            (:SPHEROID "Clarke 1880 (RGS)" 6378249.145 293.465
+             (:AUTHORITY "EPSG" "7012"))
+            (:TOWGS84 -106.0 -129.0 165.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6620"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66206405"))))
+(SETF (GETHASH 66216405 *DB*)
+        '((:GEOGCS "Fort Marigot (deg)"
+           (:DATUM "Fort Marigot"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 137.0 248.0 -430.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6621"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66216405"))))
+(SETF (GETHASH 66226405 *DB*)
+        '((:GEOGCS "Sainte Anne (deg)"
+           (:DATUM "Guadeloupe 1948"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -472.29 -5.63 -304.12 0.4362 -0.8374 0.2563
+             0.39157310817948776)
+            (:AUTHORITY "EPSG" "6622"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66226405"))))
+(SETF (GETHASH 66236405 *DB*)
+        '((:GEOGCS "CSG67 (deg)"
+           (:DATUM "Centre Spatial Guyanais 1967"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -186.0 230.0 110.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6623"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66236405"))))
+(SETF (GETHASH 66246405 *DB*)
+        '((:GEOGCS "RGFG95 (deg)"
+           (:DATUM "Reseau Geodesique Francais Guyane 1995"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 2.0 2.0 -2.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6624"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66246405"))))
+(SETF (GETHASH 66246413 *DB*)
+        '((:GEOGCS "RGFG95 (3D deg)"
+           (:DATUM "Reseau Geodesique Francais Guyane 1995"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 2.0 2.0 -2.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6624"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66246413"))))
+(SETF (GETHASH 66256405 *DB*)
+        '((:GEOGCS "Fort Desaix (deg)"
+           (:DATUM "Martinique 1938"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 126.93 547.94 130.41 -2.7867 5.1612 -0.8584
+             2.851136537311739)
+            (:AUTHORITY "EPSG" "6625"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66256405"))))
+(SETF (GETHASH 66266405 *DB*)
+        '((:GEOGCS "Piton des Neiges (deg)"
+           (:DATUM "Reunion 1947"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 94.0 -948.0 -1262.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6626"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66266405"))))
+(SETF (GETHASH 66276405 *DB*)
+        '((:GEOGCS "RGR92 (deg)"
+           (:DATUM "Reseau Geodesique de la Reunion 1992"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6627"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66276405"))))
+(SETF (GETHASH 66276413 *DB*)
+        '((:GEOGCS "RGR92 (3D deg)"
+           (:DATUM "Reseau Geodesique de la Reunion 1992"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6627"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66276413"))))
+(SETF (GETHASH 66286405 *DB*)
+        '((:GEOGCS "Tahiti (deg)"
+           (:DATUM "Tahiti 52"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 162.0 117.0 154.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6628"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66286405"))))
+(SETF (GETHASH 66296405 *DB*)
+        '((:GEOGCS "Tahaa (deg)"
+           (:DATUM "Tahaa 54"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 72.438 345.918 79.486 1.6045 -0.8823 -0.5565
+             0.2835316026672587)
+            (:AUTHORITY "EPSG" "6629"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66296405"))))
+(SETF (GETHASH 66306405 *DB*)
+        '((:GEOGCS "IGN72 Nuku Hiva (deg)"
+           (:DATUM "IGN72 Nuku Hiva"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 259.551 297.612 197.833 -1.4866 2.1224 0.4612
+             5.574285762347154)
+            (:AUTHORITY "EPSG" "6630"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66306405"))))
+(SETF (GETHASH 66316405 *DB*)
+        '((:GEOGCS "K0 1949 (deg)"
+           (:DATUM "K0 1949"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 145.0 -187.0 103.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6631"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66316405"))))
+(SETF (GETHASH 66326405 *DB*)
+        '((:GEOGCS "Combani 1950 (deg)"
+           (:DATUM "Combani 1950"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -382.0 -59.0 -262.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6632"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66326405"))))
+(SETF (GETHASH 66336405 *DB*)
+        '((:GEOGCS "IGN56 Lifou (deg)"
+           (:DATUM "IGN56 Lifou"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 335.47 222.58 -230.94 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6633"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66336405"))))
+(SETF (GETHASH 66346405 *DB*)
+        '((:GEOGCS "IGN72 Grande Terre (deg)"
+           (:DATUM "IGN72 Grande Terre"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -11.64 -348.6 291.98 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6634"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66346405"))))
+(SETF (GETHASH 66356405 *DB*)
+        '((:GEOGCS "ST87 Ouvea (deg)"
+           (:DATUM "ST87 Ouvea"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -122.383 -188.696 103.344 3.5107 -4.9668 -5.7047
+             0.9240250790257423)
+            (:AUTHORITY "EPSG" "6635"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66356405"))))
+(SETF (GETHASH 66366405 *DB*)
+        '((:GEOGCS "Petrels 1972 (deg)"
+           (:DATUM "Petrels 1972"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 365.0 194.0 166.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6636"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66366405"))))
+(SETF (GETHASH 66376405 *DB*)
+        '((:GEOGCS "Perroud 1950 (deg)"
+           (:DATUM "Pointe Geologie Perroud 1950"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 325.0 154.0 172.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6637"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66376405"))))
+(SETF (GETHASH 66386405 *DB*)
+        '((:GEOGCS "Saint Pierre et Miquelon 1950 (deg)"
+           (:DATUM "Saint Pierre et Miquelon 1950"
+            (:SPHEROID "Clarke 1866" 6378206.4 294.9786982138982
+             (:AUTHORITY "EPSG" "7008"))
+            (:TOWGS84 30.0 430.0 368.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6638"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66386405"))))
+(SETF (GETHASH 66396405 *DB*)
+        '((:GEOGCS "MOP78 (deg)"
+           (:DATUM "MOP78"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 253.0 -132.0 -127.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6639"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66396405"))))
+(SETF (GETHASH 66406405 *DB*)
+        '((:GEOGCS "RRAF 1991 (deg)"
+           (:DATUM "Reseau de Reference des Antilles Francaises 1991"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6640"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66406405"))))
+(SETF (GETHASH 66406413 *DB*)
+        '((:GEOGCS "RRAF 1991 (3D deg)"
+           (:DATUM "Reseau de Reference des Antilles Francaises 1991"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6640"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66406413"))))
+(SETF (GETHASH 66416405 *DB*)
+        '((:GEOGCS "IGN53 Mare (deg)"
+           (:DATUM "IGN53 Mare"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 287.58 177.78 -135.41 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6641"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66416405"))))
+(SETF (GETHASH 66426405 *DB*)
+        '((:GEOGCS "ST84 Ile des Pins (deg)"
+           (:DATUM "ST84 Ile des Pins"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -13.0 -348.0 292.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6642"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66426405"))))
+(SETF (GETHASH 66436405 *DB*)
+        '((:GEOGCS "ST71 Belep (deg)"
+           (:DATUM "ST71 Belep"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -480.26 -438.32 -643.429 16.3119 20.1721 -4.0349
+             -23.039820110761912)
+            (:AUTHORITY "EPSG" "6643"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66436405"))))
+(SETF (GETHASH 66446405 *DB*)
+        '((:GEOGCS "NEA74 Noumea (deg)"
+           (:DATUM "NEA74 Noumea"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -10.18 -350.43 291.37 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6644"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66446405"))))
+(SETF (GETHASH 66456405 *DB*)
+        '((:GEOGCS "RGNC 1991 (deg)"
+           (:DATUM "Reseau Geodesique Nouvelle Caledonie 1991"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6645"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66456405"))))
+(SETF (GETHASH 66456413 *DB*)
+        '((:GEOGCS "RGNC 1991 (3D deg)"
+           (:DATUM "Reseau Geodesique Nouvelle Caledonie 1991"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6645"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66456413"))))
+(SETF (GETHASH 66466405 *DB*)
+        '((:GEOGCS "Grand Comoros (deg)"
+           (:DATUM "Grand Comoros"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6646"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66466405"))))
+(SETF (GETHASH 66576405 *DB*)
+        '((:GEOGCS "Reykjavik 1900 (deg)"
+           (:DATUM "Reykjavik 1900"
+            (:SPHEROID "Danish 1876" 6377019.27 300.0
+             (:AUTHORITY "EPSG" "7051"))
+            (:TOWGS84 -28.0 199.0 5.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6657"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66576405"))))
+(SETF (GETHASH 66586405 *DB*)
+        '((:GEOGCS "Hjorsey 1955 (deg)"
+           (:DATUM "Hjorsey 1955"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -73.0 46.0 -86.0 0.0 0.0 0.0 0.0)
+            (:AUTHORITY "EPSG" "6658"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66586405"))))
+(SETF (GETHASH 66596405 *DB*)
+        '((:GEOGCS "ISN93 (deg)"
+           (:DATUM "Islands Network 1993"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6659"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66596405"))))
+(SETF (GETHASH 66596413 *DB*)
+        '((:GEOGCS "ISN93 (3D deg)"
+           (:DATUM "Islands Network 1993"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6659"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "DMS" 4.84813681109536e-6) (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66596413"))))
+(SETF (GETHASH 66606405 *DB*)
+        '((:GEOGCS "Helle 1954 (deg)"
+           (:DATUM "Helle 1954"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 982.6087 552.753 -540.873 6.681626625276941
+             -31.61149240864225 -19.848161004816845 3.466280068982454)
+            (:AUTHORITY "EPSG" "6660"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66606405"))))
+(SETF (GETHASH 66616405 *DB*)
+        '((:GEOGCS "LKS92 (deg)"
+           (:DATUM "Latvia 1992"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6661"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66616405"))))
+(SETF (GETHASH 66616413 *DB*)
+        '((:GEOGCS "LKS92 (3D deg)"
+           (:DATUM "Latvia 1992"
+            (:SPHEROID "GRS 1980" 6378137.0 298.257222101
+             (:AUTHORITY "EPSG" "7019"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6661"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AXIS "Ellipsoidal height" :UP)
+           (:AUTHORITY "EPSG" "66616413"))))
+(SETF (GETHASH 66636405 *DB*)
+        '((:GEOGCS "Porto Santo 1995 (deg)"
+           (:DATUM "Porto Santo 1995"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -210.502 -66.902 -48.476 2.094 15.067 5.817
+             0.10003843102984174)
+            (:AUTHORITY "EPSG" "6663"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66636405"))))
+(SETF (GETHASH 66646405 *DB*)
+        '((:GEOGCS "Azores Oriental 1995 (deg)"
+           (:DATUM "Azores Oriental Islands 1995"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -208.719 129.685 52.092 -0.195 0.014 -0.327
+             0.040840431636925086)
+            (:AUTHORITY "EPSG" "6664"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66646405"))))
+(SETF (GETHASH 66656405 *DB*)
+        '((:GEOGCS "Azores Central 1995 (deg)"
+           (:DATUM "Azores Central Islands 1995"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:TOWGS84 -103.088 162.481 -28.276 0.167 -0.082 -0.168
+             -0.31022226859563296)
+            (:AUTHORITY "EPSG" "6665"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66656405"))))
+(SETF (GETHASH 66666405 *DB*)
+        '((:GEOGCS "Lisbon 1890 (deg)"
+           (:DATUM "Lisbon 1890"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:TOWGS84 631.392 -66.551 481.442 1.09 4.445 4.487
+             -0.9137530916746368)
+            (:AUTHORITY "EPSG" "6666"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66666405"))))
+(SETF (GETHASH 66676405 *DB*)
+        '((:GEOGCS "IKBD-92 (deg)"
+           (:DATUM "Iraq-Kuwait Boundary Datum 1992"
+            (:SPHEROID "WGS 84" 6378137.0 298.257223563
+             (:AUTHORITY "EPSG" "7030"))
+            (:TOWGS84 0.0 0.0 0.0 0.0 0.0 0.0 0.0) (:AUTHORITY "EPSG" "6667"))
+           (:PRIMEM "Greenwich" 0.0 (:AUTHORITY "EPSG" "8901"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "66676405"))))
+(SETF (GETHASH 68016405 *DB*)
+        '((:GEOGCS "Bern 1898 (Bern) (deg)"
+           (:DATUM "CH1903 (Bern)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6801"))
+           (:PRIMEM "Bern" 7.439583333333333 (:AUTHORITY "EPSG" "8907"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68016405"))))
+(SETF (GETHASH 68026405 *DB*)
+        '((:GEOGCS "Bogota 1975 (Bogota) (deg)"
+           (:DATUM "Bogota 1975 (Bogota)"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6802"))
+           (:PRIMEM "Bogota" -74.08091666666668 (:AUTHORITY "EPSG" "8904"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68026405"))))
+(SETF (GETHASH 68036405 *DB*)
+        '((:GEOGCS "Lisbon (Lisbon) (deg)"
+           (:DATUM "Lisbon 1937 (Lisbon)"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6803"))
+           (:PRIMEM "Lisbon" -9.131906111111114 (:AUTHORITY "EPSG" "8902"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68036405"))))
+(SETF (GETHASH 68046405 *DB*)
+        '((:GEOGCS "Makassar (Jakarta) (deg)"
+           (:DATUM "Makassar (Jakarta)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6804"))
+           (:PRIMEM "Jakarta" 106.80771944444446 (:AUTHORITY "EPSG" "8908"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68046405"))))
+(SETF (GETHASH 68056405 *DB*)
+        '((:GEOGCS "MGI (Ferro) (deg)"
+           (:DATUM "Militar-Geographische Institut (Ferro)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6805"))
+           (:PRIMEM "Ferro" -17.666666666666668 (:AUTHORITY "EPSG" "8909"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68056405"))))
+(SETF (GETHASH 68066405 *DB*)
+        '((:GEOGCS "Monte Mario (Rome) (deg)"
+           (:DATUM "Monte Mario (Rome)"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6806"))
+           (:PRIMEM "Rome" 12.452333333333332 (:AUTHORITY "EPSG" "8906"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68066405"))))
+(SETF (GETHASH 68086405 *DB*)
+        '((:GEOGCS "Padang (Jakarta) (deg)"
+           (:DATUM "Padang 1884 (Jakarta)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6808"))
+           (:PRIMEM "Jakarta" 106.80771944444446 (:AUTHORITY "EPSG" "8908"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68086405"))))
+(SETF (GETHASH 68096405 *DB*)
+        '((:GEOGCS "Belge 1950 (Brussels) (deg)"
+           (:DATUM "Reseau National Belge 1950 (Brussels)"
+            (:SPHEROID "International 1924" 6378388.0 297.0
+             (:AUTHORITY "EPSG" "7022"))
+            (:AUTHORITY "EPSG" "6809"))
+           (:PRIMEM "Brussels" 4.3679749999999995 (:AUTHORITY "EPSG" "8910"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68096405"))))
+(SETF (GETHASH 68136405 *DB*)
+        '((:GEOGCS "Batavia (Jakarta) (deg)"
+           (:DATUM "Batavia (Jakarta)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6813"))
+           (:PRIMEM "Jakarta" 106.80771944444446 (:AUTHORITY "EPSG" "8908"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68136405"))))
+(SETF (GETHASH 68146405 *DB*)
+        '((:GEOGCS "RT38 (Stockholm) (deg)"
+           (:DATUM "Stockholm 1938 (Stockholm)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6814"))
+           (:PRIMEM "Stockholm" 18.058277777777775 (:AUTHORITY "EPSG" "8911"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68146405"))))
+(SETF (GETHASH 68156405 *DB*)
+        '((:GEOGCS "Greek (Athens) (deg)"
+           (:DATUM "Greek (Athens)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6815"))
+           (:PRIMEM "Athens" 23.7163375 (:AUTHORITY "EPSG" "8912"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68156405"))))
+(SETF (GETHASH 68186405 *DB*)
+        '((:GEOGCS "S-JTSK (Ferro) (deg)"
+           (:DATUM "S-JTSK (Ferro)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6818"))
+           (:PRIMEM "Ferro" -17.666666666666668 (:AUTHORITY "EPSG" "8909"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68186405"))))
+(SETF (GETHASH 68206405 *DB*)
+        '((:GEOGCS "Segara (Jakarta) (deg)"
+           (:DATUM "Gunung Segara (Jakarta)"
+            (:SPHEROID "Bessel 1841" 6377397.155 299.1528128
+             (:AUTHORITY "EPSG" "7004"))
+            (:AUTHORITY "EPSG" "6820"))
+           (:PRIMEM "Jakarta" 106.80771944444446 (:AUTHORITY "EPSG" "8908"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "68206405"))))
+(SETF (GETHASH 69036405 *DB*)
+        '((:GEOGCS "Madrid 1870 (Madrid) (deg)"
+           (:DATUM "Madrid 1870 (Madrid)"
+            (:SPHEROID "Struve 1860" 6378298.3 294.73
+             (:AUTHORITY "EPSG" "7028"))
+            (:AUTHORITY "EPSG" "6903"))
+           (:PRIMEM "Madrid" -3.68793888888889 (:AUTHORITY "EPSG" "8905"))
+           (:UNIT "degree" 0.017453292519943295)
+           (:AXIS "Geodetic latitude" :NORTH)
+           (:AXIS "Geodetic longitude" :EAST) (:AUTHORITY "EPSG" "69036405"))))

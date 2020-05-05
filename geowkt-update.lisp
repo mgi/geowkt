@@ -116,10 +116,11 @@
 
 (defun update-db (&optional (codes *epsgs*))
   (with-open-file (out #p"db.lisp" :direction :output
-                                   :if-exists :supersede
+                                   :if-exists :append
                                    :if-does-not-exist :create)
-    (write '(in-package :geowkt) :stream out)
-    (terpri out)
+    (when (zerop (file-position out))
+      (write '(in-package :geowkt) :stream out)
+      (terpri out))
     (loop for code in codes
           do (handler-case
                  (let ((response (get-online code)))
