@@ -114,14 +114,13 @@
     (when (= code 200)
       content)))
 
-(defun update-db (&key (start 2000) (end 32761))
-  (with-open-file (out #p"db.lisp":direction :output
-                                  :if-exists :append
-                                  :if-does-not-exist :create)
-    (when (zerop (file-position out))
-      (write '(in-package :geowkt) :stream out)
-      (terpri out))
-    (loop for code from start to end
+(defun update-db (&optional (codes *epsgs*))
+  (with-open-file (out #p"db.lisp" :direction :output
+                                   :if-exists :supersede
+                                   :if-does-not-exist :create)
+    (write '(in-package :geowkt) :stream out)
+    (terpri out)
+    (loop for code in codes
           do (handler-case
                  (let ((response (get-online code)))
                    (when response
@@ -130,3 +129,27 @@
                      (finish-output out))
                    (sleep 0.1))
                (wkt-parse-error ())))))
+
+;;; Helper to keep *epsgs* up to date
+(defun codes-from-page (page)
+  "Get defined EPSG codes from spatialreference.org PAGE."
+  (let ((regex "/ref/epsg/([0-9]+)"))
+    (multiple-value-bind (content code)
+        (drakma:http-request (format nil "https://spatialreference.org/ref/epsg/?page=~d" page))
+      (when (= code 200)
+        (labels ((parse-ref (ref)
+                   (multiple-value-bind (match regs) (ppcre:scan-to-strings regex ref)
+                     (declare (ignore match))
+                     (parse-integer (svref regs 0)))))
+          (mapcar #'parse-ref (ppcre:all-matches-as-strings regex content)))))))
+
+(defun update-codes-list ()
+  (with-open-file (out #p"epsg-codes.lisp" :direction :output
+                                           :if-exists :supersede)
+    (write '(in-package :geowkt-update) :stream out)
+    (terpri out)
+    (let ((codes (loop for page from 1 to 88
+                       for codes = (codes-from-page page)
+                       append codes)))
+      (write `(defparameter *epsgs* ',codes) :stream out)
+      (terpri out))))
