@@ -131,28 +131,30 @@
                    (sleep 0.1))
                (wkt-parse-error ())))))
 
-;;; Helper to keep *epsgs* up to date.  XXX The two following routines
-;;; do not work anymore now that spatialreference.org is using
-;;; javascript to render those pages.
-(defun codes-from-page (page)
-  "Get defined EPSG codes from spatialreference.org PAGE."
-  (let ((regex "/ref/epsg/([0-9]+)"))
-    (multiple-value-bind (content code)
-        (drakma:http-request (format nil "https://spatialreference.org/ref/epsg/?page=~d" page))
-      (when (= code 200)
-        (labels ((parse-ref (ref)
-                   (multiple-value-bind (match regs) (ppcre:scan-to-strings regex ref)
-                     (declare (ignore match))
-                     (parse-integer (svref regs 0)))))
-          (mapcar #'parse-ref (ppcre:all-matches-as-strings regex content)))))))
+;;; Helper to keep *epsgs* up to date.  Parse
+;;; "https://spatialreference.org/crslist.json" to this end.
+
+(defun get-code-from-entry (entry)
+  (let ((a (assoc :code entry)))
+    (and a (parse-integer (cdr a)))))
+
+(defun filter-epsg-only (list)
+  (remove-if-not
+   #'(lambda (x)
+       (let ((a (assoc :auth--name x)))
+         (and a (string-equal "EPSG" (cdr a)))))
+   list))
 
 (defun update-codes-list ()
-  (with-open-file (out #p"epsg-codes.lisp" :direction :output
-                                           :if-exists :supersede)
-    (write '(in-package :geowkt-update) :stream out)
-    (terpri out)
-    (let ((codes (loop for page from 1 to 88
-                       for codes = (codes-from-page page)
-                       append codes)))
-      (write `(defparameter *epsgs* ',codes) :stream out)
-      (terpri out))))
+  (multiple-value-bind (content code)
+      (drakma:http-request "https://spatialreference.org/crslist.json")
+    (when (= code 200)
+      (let* ((parsed (json:decode-json-from-string
+                      (sb-ext:octets-to-string content)))
+             (codes (mapcar #'get-code-from-entry (filter-epsg-only parsed))))
+        (with-open-file (out #p"epsg-codes.lisp" :direction :output
+                                                 :if-exists :supersede)
+          (write '(in-package :geowkt-update) :stream out)
+          (terpri out)
+          (write `(defparameter *epsgs* ',codes) :stream out)
+          (terpri out))))))
