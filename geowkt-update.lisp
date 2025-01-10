@@ -114,50 +114,48 @@
     (when (= code 200)
       content)))
 
+(defun add-entry (code entry db name-db)
+  "Add (CODE; ENTRY) both in DB and NAME-DB."
+  (setf (gethash code db) entry)
+  ;; The name based DB is subject to collision.  So we first build the
+  ;; hash table and then write it to a file below.
+  (let ((name (and entry (second entry))))
+    (multiple-value-bind (v presentp) (gethash name name-db)
+      (if presentp
+          ;; Is it a simple entry or a list of such entries?
+          (if (member (car v) '(:PROJCS :GEOGCS))
+              (setf (gethash name name-db) (list entry v))
+              (setf (gethash name name-db) (push entry v)))
+          (setf (gethash name name-db) entry)))))
+
+(defun append-db-to-file (db filename dbname)
+  "Append DB content to FILENAME for database named DBNAME."
+  (with-open-file (out filename :direction :output
+                                :if-exists :append
+                                :if-does-not-exist :create)
+    (when (zerop (file-position out))
+      (write '(in-package :geowkt) :stream out)
+      (terpri out))
+    (maphash #'(lambda (k v)
+                 (write `(setf (gethash ,k ,dbname) ',v) :stream out)
+                 (terpri out))
+             db)))
+
 (defun update-dbs (&optional (codes *epsgs*))
   "Update both databases in \"db.lisp\" and \"name-db.lisp\"."
-  (let ((name-db (make-hash-table :test 'equal)))
-    (with-open-file (out #p"db.lisp" :direction :output
-                                     :if-exists :supersede
-                                     :if-does-not-exist :create)
-      (when (zerop (file-position out))
-        (write '(in-package :geowkt) :stream out)
-        (terpri out))
-      (loop for code in codes
-            do (handler-case
-                   (let ((response (get-online code)))
-                     (when response
-                       (let ((entry (parse response)))
-                         ;; Write entry for the code DB.
-                         (write `(setf (gethash ,code *db*) ',entry) :stream out)
-                         (terpri out)
-                         (finish-output out)
-                         ;; The name based DB is subject to collision.
-                         ;; So we first build the hash table and then
-                         ;; write it to a file below.
-                         (let ((name (and entry (second entry))))
-                           (multiple-value-bind (v presentp) (gethash name name-db)
-                             (if presentp
-                                 ;; Is it a simple entry or a list of
-                                 ;; such entries?
-                                 (if (member (car v) '(:PROJCS :GEOGCS))
-                                     (setf (gethash name name-db) (list entry v))
-                                     (setf (gethash name name-db) (push entry v)))
-                                 (setf (gethash name name-db) entry))))))
-                     ;; Do not load the server too much.
-                     (sleep 0.1))
-                 (wkt-parse-error ()))))
-    ;; Output name database.
-    (with-open-file (out #p"name-db.lisp" :direction :output
-                                          :if-exists :supersede
-                                          :if-does-not-exist :create)
-      (when (zerop (file-position out))
-        (write '(in-package :geowkt) :stream out)
-        (terpri out))
-      (maphash #'(lambda (k v)
-                   (write `(setf (gethash ,k *name-db*) ',v) :stream out)
-                   (terpri out))
-               name-db))))
+  (let ((db (make-hash-table))
+        (name-db (make-hash-table :test 'equal)))
+    (dolist (code codes)
+      (handler-case
+          (let ((response (get-online code)))
+            (when response
+              (let ((entry (parse response)))
+                (add-entry code entry db name-db)))
+            ;; Do not load the server too much.
+            (sleep 0.1))
+        (simple-error ())))
+    (append-db-to-file db #p"db.lisp" '*db*)
+    (append-db-to-file name-db #p"name-db.lisp" '*name-db*)))
 
 ;;; Helper to keep *epsgs* up to date.  Parse
 ;;; "https://spatialreference.org/crslist.json" to this end.
