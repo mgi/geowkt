@@ -114,22 +114,50 @@
     (when (= code 200)
       content)))
 
-(defun update-db (&optional (codes *epsgs*))
-  (with-open-file (out #p"db.lisp" :direction :output
-                                   :if-exists :append
-                                   :if-does-not-exist :create)
-    (when (zerop (file-position out))
-      (write '(in-package :geowkt) :stream out)
-      (terpri out))
-    (loop for code in codes
-          do (handler-case
-                 (let ((response (get-online code)))
-                   (when response
-                     (write `(setf (gethash ,code *db*) ',(parse response)) :stream out)
-                     (terpri out)
-                     (finish-output out))
-                   (sleep 0.1))
-               (wkt-parse-error ())))))
+(defun update-dbs (&optional (codes *epsgs*))
+  "Update both databases in \"db.lisp\" and \"name-db.lisp\"."
+  (let ((name-db (make-hash-table :test 'equal)))
+    (with-open-file (out #p"db.lisp" :direction :output
+                                     :if-exists :supersede
+                                     :if-does-not-exist :create)
+      (when (zerop (file-position out))
+        (write '(in-package :geowkt) :stream out)
+        (terpri out))
+      (loop for code in codes
+            do (handler-case
+                   (let ((response (get-online code)))
+                     (when response
+                       (let ((entry (parse response)))
+                         ;; Write entry for the code DB.
+                         (write `(setf (gethash ,code *db*) ',entry) :stream out)
+                         (terpri out)
+                         (finish-output out)
+                         ;; The name based DB is subject to collision.
+                         ;; So we first build the hash table and then
+                         ;; write it to a file below.
+                         (let ((name (and entry (second entry))))
+                           (multiple-value-bind (v presentp) (gethash name name-db)
+                             (if presentp
+                                 ;; Is it a simple entry or a list of
+                                 ;; such entries?
+                                 (if (member (car v) '(:PROJCS :GEOGCS))
+                                     (setf (gethash name name-db) (list entry v))
+                                     (setf (gethash name name-db) (push entry v)))
+                                 (setf (gethash name name-db) entry))))))
+                     ;; Do not load the server too much.
+                     (sleep 0.1))
+                 (wkt-parse-error ()))))
+    ;; Output name database.
+    (with-open-file (out #p"name-db.lisp" :direction :output
+                                          :if-exists :supersede
+                                          :if-does-not-exist :create)
+      (when (zerop (file-position out))
+        (write '(in-package :geowkt) :stream out)
+        (terpri out))
+      (maphash #'(lambda (k v)
+                   (write `(setf (gethash ,k *name-db*) ',v) :stream out)
+                   (terpri out))
+               name-db))))
 
 ;;; Helper to keep *epsgs* up to date.  Parse
 ;;; "https://spatialreference.org/crslist.json" to this end.
