@@ -131,7 +131,9 @@
                    (sleep 0.1))
                (wkt-parse-error ())))))
 
-;;; Helper to keep *epsgs* up to date
+;;; Helper to keep *epsgs* up to date.  XXX The two following routines
+;;; do not work anymore now that spatialreference.org is using
+;;; javascript to render those pages.
 (defun codes-from-page (page)
   "Get defined EPSG codes from spatialreference.org PAGE."
   (let ((regex "/ref/epsg/([0-9]+)"))
