@@ -94,7 +94,7 @@
                  (next))))
       (loop until (tokenp token :eof)
             when (statement)
-              collect it))))
+              nconc it))))
 
 (defun %get-tokens (string)
   "Debugging helper"
