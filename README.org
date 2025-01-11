@@ -1,24 +1,63 @@
-* Geowkt
+* GeoWKT
 
 This package gives you access to an offline (sucked up from
-http://spatialreference.org) Geowkt database. It provides a simple
-interface =geowkt:wkt-from-code= that returns a /a-list/ style entry
-for the given EPSG code. Example:
+http://spatialreference.org) GeoWKT database.  It provides a simple
+interface =geowkt:wkt= that returns a /a-list/ style entry for the
+given EPSG code.  Example:
 #+begin_src lisp
-(geowkt:wkt-from-code 2154)
-=>
-((:PROJCS "RGF93 / Lambert-93"
-  (:GEOGCS "RGF93"
-   (:DATUM "Reseau_Geodesique_Francais_1993"
-    (:SPHEROID "GRS 1980" 6378137 298.257222101 (:AUTHORITY "EPSG" "7019"))
-    (:TOWGS84 0 0 0 0 0 0 0) (:AUTHORITY "EPSG" "6171"))
-   (:PRIMEM "Greenwich" 0 (:AUTHORITY "EPSG" "8901"))
-   (:UNIT "degree" 0.01745329251994328 (:AUTHORITY "EPSG" "9122"))
-   (:AUTHORITY "EPSG" "4171"))
-  (:UNIT "metre" 1 (:AUTHORITY "EPSG" "9001"))
-  (:PROJECTION "Lambert_Conformal_Conic_2SP")
-  (:PARAMETER "standard_parallel_1" 49) (:PARAMETER "standard_parallel_2" 44)
-  (:PARAMETER "latitude_of_origin" 46.5) (:PARAMETER "central_meridian" 3)
-  (:PARAMETER "false_easting" 700000) (:PARAMETER "false_northing" 6600000)
-  (:AUTHORITY "EPSG" "2154") (:AXIS "X" :EAST) (:AXIS "Y" :NORTH)))
+  (geowkt:wkt 2154)
+  =>
+  (:PROJCS "RGF93 v1 / Lambert-93"
+           (:GEOGCS "RGF93 v1"
+                    (:DATUM "Reseau_Geodesique_Francais_1993_v1"
+                            (:SPHEROID "GRS 1980" 6378137 298.257222101 (:AUTHORITY "EPSG" "7019"))
+                            (:AUTHORITY "EPSG" "6171"))
+                    (:PRIMEM "Greenwich" 0 (:AUTHORITY "EPSG" "8901"))
+                    (:UNIT "degree" 0.0174532925199433 (:AUTHORITY "EPSG" "9122"))
+                    (:AUTHORITY "EPSG" "4171"))
+           (:PROJECTION "Lambert_Conformal_Conic_2SP")
+           (:PARAMETER "latitude_of_origin" 46.5) (:PARAMETER "central_meridian" 3)
+           (:PARAMETER "standard_parallel_1" 49) (:PARAMETER "standard_parallel_2" 44)
+           (:PARAMETER "false_easting" 700000) (:PARAMETER "false_northing" 6600000)
+           (:UNIT "metre" 1 (:AUTHORITY "EPSG" "9001")) (:AXIS "Easting" :EAST)
+           (:AXIS "Northing" :NORTH) (:AUTHORITY "EPSG" "2154"))
 #+end_src
+
+You can also use a projection name string but this is more fragile and
+also subject to collision.  In the following example, there is such a
+collision and a list of possible entries is return instead:
+#+begin_src lisp
+  (geowkt:wkt "American Samoa 1962 / American Samoa Lambert (deprecated)")
+  =>
+  ((:PROJCS "American Samoa 1962 / American Samoa Lambert (deprecated)"
+            (:GEOGCS "American Samoa 1962"
+                     (:DATUM "American_Samoa_1962"
+                             (:SPHEROID "Clarke 1866" 6378206.4 294.978698213898
+                                        (:AUTHORITY "EPSG" "7008"))
+                             (:AUTHORITY "EPSG" "6169"))
+                     (:PRIMEM "Greenwich" 0 (:AUTHORITY "EPSG" "8901"))
+                     (:UNIT "degree" 0.0174532925199433 (:AUTHORITY "EPSG" "9122"))
+                     (:AUTHORITY "EPSG" "4169"))
+            (:PROJECTION "Lambert_Conformal_Conic_1SP")
+            (:PARAMETER "latitude_of_origin" -14.2666666666667)
+            (:PARAMETER "central_meridian" -170) (:PARAMETER "scale_factor" 1)
+            (:PARAMETER "false_easting" 500000) (:PARAMETER "false_northing" 0)
+            (:UNIT "US survey foot" 0.304800609601219 (:AUTHORITY "EPSG" "9003"))
+            (:AXIS "Easting" :EAST) (:AXIS "Northing" :NORTH) (:AUTHORITY "EPSG" "2194"))
+   (:PROJCS "American Samoa 1962 / American Samoa Lambert (deprecated)"
+            (:GEOGCS "American Samoa 1962"
+                     (:DATUM "American_Samoa_1962"
+                             (:SPHEROID "Clarke 1866" 6378206.4 294.978698213898
+                                        (:AUTHORITY "EPSG" "7008"))
+                             (:AUTHORITY "EPSG" "6169"))
+                     (:PRIMEM "Greenwich" 0 (:AUTHORITY "EPSG" "8901"))
+                     (:UNIT "degree" 0.0174532925199433 (:AUTHORITY "EPSG" "9122"))
+                     (:AUTHORITY "EPSG" "4169"))
+            (:PROJECTION "Lambert_Conformal_Conic_1SP")
+            (:PARAMETER "latitude_of_origin" -14.2666666666667)
+            (:PARAMETER "central_meridian" 170) (:PARAMETER "scale_factor" 1)
+            (:PARAMETER "false_easting" 500000) (:PARAMETER "false_northing" 0)
+            (:UNIT "US survey foot" 0.304800609601219 (:AUTHORITY "EPSG" "9003"))
+            (:AXIS "Easting" :EAST) (:AXIS "Northing" :NORTH) (:AUTHORITY "EPSG" "2155")))
+#+end_src
+

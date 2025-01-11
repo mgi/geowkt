@@ -4,4 +4,4 @@
 
 (defpackage :geowkt
   (:use #:common-lisp)
-  (:export #:wkt-from-code))
+  (:export #:wkt))
